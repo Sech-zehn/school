@@ -1,0 +1,2 @@
+# school
+All school-related
