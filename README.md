@@ -17,4 +17,9 @@ J'ai fait une page par matière séparées entre le CFA et l'université, ainsi 
 
 Hésite pas à te servir de la barre de recherche, elle est performante.
 
-<span style="float: right; padding: 10px;">Bonne galère :blue_heart:</span>
+## Participation
+
+Surtout n'hésite pas a contribuer, que ce soit pour modifier du contenu existant ou en rajouter du nouveau.
+Par contre je te demanderai de le faire dans une branche séparée et de demander un merge une fois que tu as fini, sinon ce sera vite le bordel.
+
+Bonne galère :blue_heart:
