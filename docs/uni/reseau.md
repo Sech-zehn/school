@@ -1,4 +1,4 @@
-!!!note "MAJ le 14/09/2022 à 15h"
+!!!note "MAJ le 14/09/2022 à 17h30"
 
 # Cours de réseaux
 
@@ -253,3 +253,110 @@ Telnet utilise le port 23.
 ### Exercice 7
 
 !!!warning "A compléter."
+
+## TD4
+
+!!!info "`iptables` est obsolète et Netfilter déconseille de l'utiliser."
+
+!!!tip "J'ai fait un [memo sur la page misc](/misc/#iptables) avec principe, commandes et modules!"
+
+### Prise en main
+
+Supprimer la règle d'une chaine:
+
+```
+iptables -D [chaine] [règle]
+```
+
+Supprimer toutes les règles d'une chaine:
+
+```
+iptables -F [chaine]
+```
+
+Supprimer une chaine:
+
+```bash
+iptables -X [chaine] # (1)
+```
+
+1. Attention, on ne peut pas supprimer les "chaines originales" (INPUT, FORWARD, OUTPUT etc).
+
+!!!fail "Je n'ai pas de machine RedHat, et `iptables` n'a pas de fichier de configuration."
+    Le contenu de `/etc/sysconfig/iptable` restera donc un mystère.
+
+`iptables`n'est pas reconnu en tant que service, donc la commande `service iptables` ne passera pas, mais la commande suivante est déjà très informative:
+
+```
+iptables --help
+```
+
+On peut aussi regarder le man si on l'a téléchargé.
+
+### Filtrage de ports
+
+!!!warning "Cette section n'a pas été vérifiée."
+
+```bash
+iptables -A INPUT -p tcp --dport 22 -J DROP
+iptables -I INPUT -p tcp --dport 22 -s n.n.n.n -J ACCEPT # (1)
+iptables -F
+iptables -N ssh
+iptables -A INPUT -p tcp --dport 22 -J ssh
+iptables -A ssh -s n.n.n.n -J ACCEPT
+iptables -A ssh -J DROP
+```
+
+1. `-I` permet de placer la règle en haut de l'ordre d'exécution.
+
+#### Exercice 1
+
+```
+iptables -A INPUT -p tcp --dport 22 -s n.n.n.n -J ACCEPT
+iptables -A INPUT -p tcp --dport 25 -s n.n.n.n -J ACCEPT
+iptables -A INPUT -p tcp --dport 22 -J LOG "SSH interdit"
+iptables -A INPUT -J DROP
+```
+
+#### Exercice 2
+
+```
+iptables -A OUTPUT -p all --dport 80 -J DROP
+iptables -A OUTPUT -p all --dport 443 -J DROP
+```
+
+Affin de trier les utilisateurs, on doit utiliser le module `owner`:
+
+```
+iptables -I OUTPUT -p all --dport 80 -m owner --uid-owner root -J ACCEPT
+iptables -I OUTPUT -p all --dport 443 -m owner --uid-owner root -J ACCEPT
+```
+
+#### Exercice 3
+
+Il faut utiliser le module `limit`:
+
+```
+iptables -I INPUT -p icmp -m limit --limit 10/s -J ACCEPT
+```
+
+### Suivi de connexion (conntrack)
+
+!!!warning "Cette section n'a pas été vérifiée."
+
+```
+iptables -F
+modeprobe ip_conntrack_ftp
+iptables -A INPUT -J DROP
+ftp
+passive
+open 192.198.n.n
+exit
+iptables -I INPUT -p tcp --sport 21 -m state --state ESTABLISHED -J ACCEPT
+ftp
+passive
+open 192.198.n.n
+n
+n
+ls
+```
