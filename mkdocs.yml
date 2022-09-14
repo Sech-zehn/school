@@ -1,0 +1,88 @@
+site_name: School
+site_description: Bienvenue dans mon bordel
+site_author: Tim FROLOV
+copyright: Copyright &copy; 2015 - 2022 Tim FROLOV
+site_url: http://school.frolov.eu
+
+nav:
+    - Acceuil: index.md
+    - CFA:
+      - CCNA 1: cfa/ccna1.md
+    - Université:
+      - Réseau: uni/reseau.md
+    - Misc: misc.md
+
+theme:
+    name: 'material'
+    language: en
+    icon:
+        logo: material/school
+        repo: fontawesome/brands/github
+    palette:
+        scheme: slate
+        primary: deep purple
+        accent: pink
+    font:
+        text: Roboto
+        code: Roboto Mono
+    features:
+        - content.code.annotate
+        - content.tabs.link
+        - content.tooltips
+        - navigation.instant
+        - navigation.tracking
+        - navigation.tabs
+        - navigation.top
+        - search.suggest
+        - search.highlight
+
+markdown_extensions:
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - admonition
+    - codehilite
+    - toc:
+        permalink: true
+    - pymdownx.details
+    - pymdownx.mark
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.superfences
+    - pymdownx.arithmatex:
+        generic: true
+    - footnotes
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - attr_list
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - attr_list
+    - md_in_html
+    - abbr
+    - attr_list
+    - pymdownx.snippets
+
+plugins:
+    - search:
+        lang:
+        - en
+        - ru
+    - glightbox
+
+extra:
+  social:
+    - icon: material/email-edit
+      link: mailto:<admin@frolov.eu>
+      name: admin@frolov.eu
+    - icon: material/github
+      link: https://github.com/FlagHunter01/school/
+      name: FlagHunter01 on GitHub
