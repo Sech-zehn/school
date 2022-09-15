@@ -1,0 +1,36 @@
+# Sécurité des réseaux
+
+## TD0
+
+### Exercice 0
+
+!!!fail "La prof a skipé et j'en sais rien :/"
+
+### Exercice 1
+
+```
+                                       <- A>B 201(15) ack 701 "Echo HACKED"
+<- B>A 701(15) ack 216 "Echo HACKED"
+-> A>B 201 ack 715
+<- B>A 716 ack 216
+```
+
+### Exercice 2
+
+1. A enverait un ack a B, qui va imméditement demander un reste de la discussion. 
+2. Si on ne détermine pas le SN initial, on ne pourra pas envoyer de messages avc le bon SN et A demandera un reset. 
+6. C'est principalement utilisé pour aquérir des iformations sensibles. 
+
+### Exercice 3
+
+1. Si j'ai bien compris, le pirate va demander des MAJ DNS à plein de serveurs en se faisant passer par A. Donc A se prendra plein de réponses longues et sera submergé.
+2. La bande passante prise pa l'attaque sera au maximum de (256/27)^745kb/s.
+
+### Exercice 4
+
+1. Dans la phase 1, Mallory DOS Alice.
+2. Dans la phase 2, kevin bruteforce le SN entre Alice et Bob.
+3. Dans la phase 3, kevin spoof Alice auprès de Bob.
+
+!!!fail "Mais Bob na jamais ack donc on a aucune idée de si ca a marché?!"
+    La prof dit que vu que la discussion était courte, le fait qu'il envoie toujours le même ack est pas grave?!
