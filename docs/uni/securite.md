@@ -34,3 +34,30 @@
 
 !!!fail "Mais Bob na jamais ack donc on a aucune idée de si ca a marché?!"
     La prof dit que vu que la discussion était courte, le fait qu'il envoie toujours le même ack est pas grave?!
+    
+### Exercice 5
+
+1. On fait des requêtes DHCP avec une nouvelle mac a chaque fois et on sature la plage DHCP. Comme ca, les vrais clients n'auont pas d'IP attribuée.
+2. En spoofan la passerelle.
+
+## TD2
+
+### Exercice 1
+
+ - 1
+ - 
+D'après Chris: `H` revient deux fois donc c'est ue lettre fréquente, comme E.
+On fait donc le masque suivant:
+```
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+XYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+
+Et par chance c'est le bon masque, on obtient:
+
+```
+SECRET
+```
+
+ - 2 Chaque lettre correspond à une autre lettre de l'alphabet puisqu'on utilise le modulo 26.
+ - 3 c
