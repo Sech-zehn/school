@@ -55,6 +55,9 @@ Le meilleur moyen de trouver ce que tu cherches est probablement la barre de rec
 
 ## Contenu vraiment aléatoire
 
+???abstract "Pour ne pas galérer avec GCC et VSCode"
+    [Aller ici](https://code.visualstudio.com/docs/cpp/config-mingw)
+
 ???abstract "Arrêter une recherche DNS sauvage"
       - ++ctrl+shift+9++ pour arrêter la recherche sauvage,
       - `conf t > no IP domain-lookup` pour prévenir les recherches futures.
