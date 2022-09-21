@@ -567,3 +567,28 @@ int lecture_socket (int socket_cliente, char *buf)
 }
 ```
 
+```make
+#
+# Makefile pour 'repeter.c'
+#
+# 1999/10/15 : dntt : creation
+#
+
+all : repeteur
+
+
+CC = gcc
+OPT = -O -Wall -pedantic -g -DCORRECTION
+
+.SUFFIXES: .o .c
+.c.o :
+	${CC} -c ${OPT} $*.c
+
+OBJ = repeteur.c \
+
+repeteur : repeteur.o
+	${CC} ${OPT}  repeteur.o -o repeteur
+
+clean :
+	rm -f ${OBJ} repeteur
+```
