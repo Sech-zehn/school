@@ -4,7 +4,7 @@
 
 ### Exercice 0
 
-!!!fail "La prof a skipé et j'en sais rien :/"
+Il parrait que c'est juste `buffer overflow`
 
 ### Exercice 1
 
