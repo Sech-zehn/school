@@ -61,3 +61,11 @@ SECRET
 
  - 2 Chaque lettre correspond à une autre lettre de l'alphabet puisqu'on utilise le modulo 26.
  - 3 c
+
+
+### Exercice 4
+
+ - 1 - On utilise Euclide étendu.  
+pgcd(89,phi) = 1
+pgcd(89,phi) = u*89 + v*phi
+197 = 
