@@ -1,161 +1,169 @@
+```c title="exercice2-3.c"
 #include <stdio.h>
-
-const int volumeUnitaire = 8;
+#include <string.h>
 
 int main()
 {
-    float longueur, largeur, hauteur;
-    printf("Longueur: ");
-    scanf("%f", &longueur);
-    printf("Largeur: ");
-    scanf("%f", &largeur);
-    printf("Hauteur: ");
-    scanf("%f", &hauteur);
-
-    float volume = longueur * largeur * hauteur;
-    int quantite = volume / volumeUnitaire;
-
-    printf("Quantité de radiateurs requise: %d", quantite);
+    char nom[12][9] = {"Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"};
+    int jour[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int numero;
+    printf("Entrez un numero de mois compris entre 1 et 12: ");
+    do
+    {
+        scanf("%d", &numero);
+    } while (numero < 1 || numero > 12);
+    numero -= 1;
+    printf("Le mois que vous avez selectionne est %s. Il contient %d jours.", nom[numero], jour[numero]);
     return 0;
 }
+```
 
+## TD 1
 
-=====
-
+```c title="exercice1.c"
 #include <stdio.h>
 
 int main()
 {
-    float celsius, fahrenheit;
-    printf("Température en °C: ");
-    scanf("%f", &celsius);
-    fahrenheit = (9.0/5.0) * celsius + 32;
-    printf("En fahrenheit: %f", fahrenheit);
+    int quantite;
+    printf("Entrez la quantite de barres que vous voudriez voir: ");
+    scanf("%d", &quantite);
+    printf("Version 1: \n");
+    for (int i = 0; i < quantite; i++)
+    {
+        printf("-");
+    }
+    printf("\nVersion 2: \n");
+    for (int i = 0; i < quantite; i++)
+    {
+        printf("-");
+    }
+    printf("\n");
+    for (int i = 0; i < quantite; i++)
+    {
+        printf("-");
+    }
+    printf("\nVersion 3: \n");
+    for (int i = 0; i < quantite; i++)
+    {
+        printf("-\n");
+    }
     return 0;
 }
+```
 
-===
-
+```c title="exercice2.c"
 #include <stdio.h>
 
 int main()
 {
-    int secondesinit, heures, minutes, secondes;
-    printf("Secondes: ");
-    scanf("%d", &secondesinit);
-    
-    heures = secondesinit / (60*60);
-    minutes = (secondesinit - (heures * 60*60)) / 60;
-    secondes = secondesinit%60;
-
-    printf("%dh%d:%d", heures, minutes, secondes);
+    int max;
+    printf("Entrez la quantite: ");
+    scanf("%d", &max);
+    for (int i = 1; i <= max; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
     return 0;
 }
+```
 
-====
-
-
-// TODO: réparer mdr
-
-
+```c title="exercice3.c"
 #include <stdio.h>
-#include <math.h>
 
 int main()
 {
-    float masse1, masse2, distance;
-    printf("Masse 1: ");
-    scanf("%f", &masse1);
-    printf("Masse 2: ");
-    scanf("%f", &masse2);
-    printf("Distance: ");
-    scanf("%f", &distance);
-    float attraction = ((6.674*10E-11)*masse1*masse2)/pow(distance, 2);
-    printf("Force: %f", attraction);
+    for (int i = 10; i <= 100; i++)
+    {
+        printf("%d: %d - %d\n", i, i * i, i * i * i);
+    }
+    return 0;
 }
+```
 
-====
-
+```c title="exercice4.c"
 #include <stdio.h>
-#include <math.h>
 
 int main()
 {
     int nombre;
-    printf("Entier: ");
+    printf("Entrez n: ");
     scanf("%d", &nombre);
-    if ((nombre%9) == 0)
+    if (nombre % 2)
     {
-        printf("Divisible par 9");
+        printf("Ce nombre est impair.");
     }
     else
     {
-        printf("Pas divisible par 9");
+        printf("Ce ombre est pair.");
     }
     return 0;
 }
+```
 
-====
-
+```c title="exercice5.c"
 #include <stdio.h>
 #include <math.h>
-#include <stdbool.h>
 
 int main()
 {
-    float a, b, c;
-    bool isocele = false;
-    bool equilateral = false;
-    do
+    float nombre;
+    printf("Entrez un nombre: ");
+    scanf("%f", &nombre);
+    if (nombre < 0)
     {
-        printf("Saisir A, B et C tels que A>B>C.\n");
-        printf("A: ");
-        scanf("%f", &a);
-        printf("B: ");
-        scanf("%f", &b);
-        printf("C: ");
-        scanf("%f", &c);
-    } while (a > b || b > c);
-    if (a + b > c)
-    {
-        if (a == b)
-        {
-            if (a == b && b == c)
-            {
-                equilateral = true;
-            }
-            else
-            {
-                isocele = true;
-            }
-        }
-        if (a * a + b * b == c * c)
-        {
-            printf("Triangle rectangle ");
-        }
-        else
-        {
-            if (a * a + b * b < c)
-            {
-                printf("Triangle obtus ");
-            }
-            if (a * a + b * b > c)
-            {
-                printf("Triangle aigu ");
-            }
-            if (equilateral)
-            {
-                printf("triangle equilatateral");
-            }
-        }
-        if (isocele)
-        {
-            printf("isocele");
-        }
+        printf("Impossible de calcler la racine d'un nombre negatif.");
     }
     else
     {
-        printf("Ceci n'est pas un triangle");
+        printf("La racine de %f est %f.", nombre, sqrt(nombre));
     }
     return 0;
 }
+```
+
+```c title="exercice6.c"
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float x;
+    int n;
+    printf("Choisissez un nombre: ");
+    scanf("%f", &x);
+    printf("Choixissez un n: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        float temp = pow(x, i);
+        printf("%f ", temp);
+    }
+    return 0;
+}
+```
+
+```c title="exercice7.c"
+#include <stdio.h>
+
+int main()
+{
+    float nombre;
+    int n;
+    float somme = 0;
+    printf("Entrez un nombre: ");
+    scanf("%f", &nombre);
+    printf("Entrez n: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        somme += nombre / (2 * i);
+    }
+    printf("La somme est: %f.", somme);
+    return 0;
+}
+```
