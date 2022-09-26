@@ -18,7 +18,7 @@ int main()
 }
 ```
 
-## TD 1
+## TD 2
 
 ```c title="exercice1.c"
 #include <stdio.h>
@@ -167,3 +167,54 @@ int main()
     return 0;
 }
 ```
+
+## TD3
+
+```c title="exercice1.c"
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+const float pi = 3.141592;
+
+float aireCercle(float rayon)
+{
+    float aire = pi * pow(rayon, 2);
+    return aire;
+}
+
+float circonferenceCercle(float rayon)
+{
+    float circonference = circonference = 2 * pi * rayon;
+    return circonference;
+}
+float aireRectangle(float longueur, float largeur)
+{
+    float aire = longueur * largeur;
+    return aire;
+}
+
+float circonferenceRectangle(float longueur, float largeur)
+{
+    float circonference = 2 * (longueur = largeur);
+    return circonference;
+}
+
+int main(int argc, char **argv)
+{
+    float aire, circonference;
+    if (argc == 2)
+    {
+        aire = aireCercle((atof(argv[1])));
+        circonference = circonferenceCercle(atof(argv[1]));
+    }
+    else
+    {
+        aire = aireRectangle(atof(argv[1]), atof(argv[2]));
+        circonference = circonferenceRectangle(atof(argv[1]), atof(argv[2]));
+    }
+    printf("Aire: %f\nCirconférence: %f", aire, circonference);
+    return 0;
+}
+```
+
