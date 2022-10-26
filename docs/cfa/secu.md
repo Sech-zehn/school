@@ -65,3 +65,27 @@
     lsb_release -ds
     uname -a
     ``` 
+
+!!!abstreact "Permissions"
+     - `useradd`
+     - `usermod`
+     - `passwd`
+     - `userdel`
+     - `groupadd`
+     - `groupmod`
+     - `groupdel`
+     - `gpasswd`
+     - `groups`
+     - `newgrp`
+     - `chmod`
+     - `chown`
+     - `chgrp`
+     - `unmask`
+
+## PAM
+
+Pluguable Auth Module
+apt install libpam-google-autghenticator
+vim /etc/pam.d/common-auth
+    auth required pam_google_authenticator.so
+google-authenticator
