@@ -2,10 +2,22 @@
 
 # Sécurité linux
 
-!!!warning "La description complète sera faite ultérieurement."
+!!!warning "Rappel: J'utilise une distribution Bullseye. Les informations de cette page peuvent différer pour d'autres distributions."
+
+## Bidouillages de base
+
 
 !!!tip "Affichage d'un fichier zippé"
     On peut utiliser `zdcat`!
+
+!!!tip "Redirection de la sortie"
+    On peut rediriger la sortie d'un programme vers l'entrée d'un autre en utilisant `|`.<br>
+    Par exemple: `cat fichier | grep recherche` redirige la sortie de `cat` vers `grep`.
+
+### Outils de recherche
+
+ - Awk permet de chercher des chaines grâce à un langage presque aussi puissant que le C.
+     - Utilisation `awk -F "séparateur" -v variable
 
 !!!abstract "Outils de recherche"
      - `awk`
@@ -13,10 +25,10 @@
      - `grep`
 
 !!!abstract "Commandes sur les fichiers"
-     - Compter: `wc` 
-     - Comparaison: `diff` 
+     - Compter: `wc`
+     - Comparaison: `diff`
      - Intégrité: ` md5sum`
-     - Tri: `sort`  et ` unikq` 
+     - Tri: `sort`  et ` unikq`
 
 !!!abstract "Exemples"
     ```bash
@@ -38,7 +50,7 @@
          - `gzip`
          - `bzip2`
 
-!!!abstract "Liens" 
+!!!abstract "Liens"
      - Lien physique: `ln document lien`
      - Lien symbolique: `ln -s document lien`
 
@@ -58,13 +70,13 @@
      - Debian:
          - `/etc/issue`
          - `/etc/debian_version/bin/*sh`
-    
+
     Commandes:
     ```
     lsb_release -a
     lsb_release -ds
     uname -a
-    ``` 
+    ```
 
 !!!abstreact "Permissions"
      - `useradd`
@@ -85,7 +97,9 @@
 ## PAM
 
 Pluguable Auth Module
+```
 apt install libpam-google-autghenticator
 vim /etc/pam.d/common-auth
     auth required pam_google_authenticator.so
 google-authenticator
+```
