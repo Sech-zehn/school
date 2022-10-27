@@ -174,3 +174,9 @@ stockage:
  - /dev/fd[0, 1]
  - /dev/hd* et /dev/sr0
  - /dev/
+
+## Partitions et systèmes de fichier
+
+Pas de getion de droit d'accès chez Windows
+
+
