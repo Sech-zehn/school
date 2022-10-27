@@ -192,3 +192,56 @@ mkfs -t ext4 /dev/sdb1
 mount -t ext4 /dev/sdb1 /home/tim/test
 lsblk -fe 7
 dans /etc/fstab: UUID=eabce7c2-7ad9-42f9-a6cf-2a0bc99e1bbe /home/tim/test ext4 defaults 0 2
+
+umount /dev/sdb1
+sudo shred -v -n 1 /dev/sdb
+apt install cryptsetup
+cryptsetup luksFormat /dev/sdb
+cryptsetup --type luks open /dev/sdb victor
+mkfs -t ext4 /dev/mapper/victor
+cryptsetup luksDump /dev/sdb
+mount -v /dev/mapper/victor   /home/victor/TEST
+cryptsetup status victor
+cryptsetup close victor
+cryptsetup --type luks open /dev/sdb victor
+
+editer /etc/crypttab
+victor /dev/sdb none luks
+
+editer /etc/fstab
+UUID=b7e4c3f1-402f-4f34-83bf-db69369dd30b /home/victor/TEST ext4 defaults 0 2
+
+## Séquence d'amorcage bas niveau
+
+bios:
+Post
+detection matos
+recherche sectgeur amorcage
+chargeur d'amorcage:
+mbr
+grub stage 2
+kernel:
+Initrd
+ramfs
+détection matos
+montaged /
+
+
+Maintenir la touche Shift enfoncé au démarrage de la machine
+Pressé « e »
+You need to modify it or change it from “read-only” mode to “read-write” mode. Find the line beginning with “Linux.” Look for ro and change it to rw. Add init=/bin/bash at the end of the line, attention au clavier anglaise éhhé
+F10
+démarrer
+Mount –n – o remount,rw /
+Monter le systéme defichier de la racine 
+Passwd root
+Reinitialize de root
+Passwd victor
+Réinitialise le password de l’utilisateur Victor
+Exec /sbin/init
+Sort du shell et reboot
+
+
+grub:
+/etc/default/grub
+
