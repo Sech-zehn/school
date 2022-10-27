@@ -137,3 +137,11 @@ jobs ps pstree free top
 fuser sdparm hdparm lsof
 sar iostat mpstat pidstat vmstat
 
+recharger conf: sighup
+arret brutal sigkill
+terminer gentiement 
+
+créer zombie: (sleep 1 & exec /bin/sleep 100)&
+
+priorité d'accès au processeur: nice pour lancer avec une prio custom et renice pour redéfinir plus tard
+0 par défaut, -20 est très méchant et 19 est très gentil
