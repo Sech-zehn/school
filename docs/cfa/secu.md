@@ -187,3 +187,5 @@ p
 1
 enter enter
 w
+mkfs.ext4 /dev/sdb1
+mount -t ext4 /dev/sdb1 /media/test
