@@ -103,3 +103,37 @@ vim /etc/pam.d/common-auth
     auth required pam_google_authenticator.so
 google-authenticator
 ```
+
+stdin1 = clavier
+stdout1 = ecran
+stdout2 = erreur, écran
+
+On peut mettre 1 ou 2 devant ">" pour rediriger la sortie vers quelque part (/dev/null ou un fichier par exemple)
+
+ecraser fichier >
+ajouter au fichier >>
+Mettre en entrée <
+stdout 2>
+stdout + stderr &>
+stderr sur stdput 2>&1
+
+combinaisons possibles
+
+tee permet de lire stdin et écrire dans plusieures sorties
+ex: tail /var/log/syslog | tee fichier.txt
+
+programme daemon processus thread script fonction service application
+
+top pour voir les processus
+top -U tim
+
+## Gestion des processus
+
+arriere plan: &. Nohup pour pas que la commande crève avec le bash
+mettre en pause: ctfr Z
+passer en background: bg
+frontground: fg
+jobs ps pstree free top
+fuser sdparm hdparm lsof
+sar iostat mpstat pidstat vmstat
+
