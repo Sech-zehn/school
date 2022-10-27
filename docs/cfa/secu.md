@@ -145,3 +145,32 @@ créer zombie: (sleep 1 & exec /bin/sleep 100)&
 
 priorité d'accès au processeur: nice pour lancer avec une prio custom et renice pour redéfinir plus tard
 0 par défaut, -20 est très méchant et 19 est très gentil
+
+exec permet de remplacer le bash par le processus qu'on lance
+
+## Exécution
+
+|| exécuter la commande 2 si la 1 est morte 
+&& exécuter la commande 2 si la 1 est morte 
+(?)
+
+## Variables d'environnement
+
+HOME: répertoire utilisateur
+PWD: répertoire courant
+PATH: chemins d'accès aux exécutables
+SHELL: shell utilis" pour la connexion
+...
+
+## Matériel
+processeur:
+ - /proc/cpuinfo
+ - lscpu
+Ram:
+ - /proc/meminfo
+ - free
+stockage:
+ - /dev/sd[a-z][1-9]
+ - /dev/fd[0, 1]
+ - /dev/hd* et /dev/sr0
+ - /dev/
