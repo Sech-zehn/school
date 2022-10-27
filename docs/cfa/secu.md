@@ -181,11 +181,14 @@ Pas de getion de droit d'accès chez Windows
 
 ## Ajoutr d'un disque
 
+lsblk
 fdisk /dev/sdb
 n
 p
 1
 enter enter
 w
-mkfs.ext4 /dev/sdb1
-mount -t ext4 /dev/sdb1 /media/test
+mkfs -t ext4 /dev/sdb1
+mount -t ext4 /dev/sdb1 /home/tim/test
+lsblk -fe 7
+dans /etc/fstab: UUID=eabce7c2-7ad9-42f9-a6cf-2a0bc99e1bbe /home/tim/test ext4 defaults 0 2
