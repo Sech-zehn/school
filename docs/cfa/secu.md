@@ -179,4 +179,11 @@ stockage:
 
 Pas de getion de droit d'accès chez Windows
 
+## Ajoutr d'un disque
 
+fdisk /dev/sdb
+n
+p
+1
+enter enter
+w
