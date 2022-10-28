@@ -6,6 +6,8 @@
 
 ## Bidouillages de base
 
+!!!tip "Exécuter une commande déjà utilisée"
+    `!numéro`
 
 !!!tip "Affichage d'un fichier zippé"
     On peut utiliser `zdcat`!
@@ -227,6 +229,7 @@ détection matos
 montaged /
 
 
+```title="Pour bypass qqe chose en cas de pepin"
 Maintenir la touche Shift enfoncé au démarrage de la machine
 Pressé « e »
 You need to modify it or change it from “read-only” mode to “read-write” mode. Find the line beginning with “Linux.” Look for ro and change it to rw. Add init=/bin/bash at the end of the line, attention au clavier anglaise éhhé
@@ -240,8 +243,37 @@ Passwd victor
 Réinitialise le password de l’utilisateur Victor
 Exec /sbin/init
 Sort du shell et reboot
+```
+
+https://memo-linux.com/securiser-lacces-et-le-demarrage-du-grub-par-mot-de-passe/
 
 
 grub:
 /etc/default/grub
 
+## Scripting bash
+
+#!/bin/bash
+
+echo "premiere var " $1
+echo "commande passe " $0
+echo "all var " $@
+echo "nombre d'argument " $#
+
+-------------------------
+
+$0 : nom de la commande
+$n : argument n
+$# : nombre d’argument
+$* : valeur des arguments
+$@ : tablleau
+
+$? : code retour
+$$ : pid shell
+variable=$(commande)
+
+
+## Sites de doc
+
+tldp.org
+abs.traduc.org
