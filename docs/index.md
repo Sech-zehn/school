@@ -1,3 +1,6 @@
+!!! info "Le site est hebergé directement sur Github"
+    On peut faire des modifications **en live** en éditant [le projet associé](https://github.com/FlagHunter01/school).
+
 # Bienvenue dans mon bordel scolaire
 
 ## Intro
