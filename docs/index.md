@@ -1,5 +1,3 @@
-!!!info "Je vais créer un certificat HTTPS au plus vite."
-
 # Bienvenue dans mon bordel scolaire
 
 ## Intro
