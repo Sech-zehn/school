@@ -8,8 +8,11 @@ nav:
     - Acceuil: index.md
     - CFA:
       - CCNA 1: cfa/ccna1.md
+      - CCNA 2: cfa/ccna2.md
     - Université:
       - Réseau: uni/reseau.md
+      - Maths: uni/maths.md
+      - Sécurité: uni/securite.md
     - Misc: misc.md
 
 theme:
@@ -75,8 +78,6 @@ plugins:
     - search:
         lang:
         - en
-        - ru
-    - glightbox
 
 extra:
   social:
