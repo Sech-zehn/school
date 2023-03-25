@@ -120,7 +120,7 @@ plugins:
   - git-committers:
       repository: FlagHunter01/school
       branch: main
-  - git-authors
+  #- git-authors
   # Optimize for offline use
   #- offline
 
