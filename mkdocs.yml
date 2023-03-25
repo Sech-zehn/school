@@ -167,9 +167,9 @@ markdown_extensions:
   # make admonitions colabseable
   - pymdownx.details
   # Emoji support
-  #- pymdownx.emoji:
-  #    emoji_index: !!python/name:materialx.emoji.twemoji
-  #    emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   # Highlight code blocks
   - pymdownx.highlight:
       anchor_linenums: true
