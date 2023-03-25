@@ -19,12 +19,15 @@ nav:
     - Acceuil: index.md
     - CFA:
       - CCNA 1: cfa/ccna1.md
-      - CCNA 2: cfa/ccna2.md
+      - CCNA 2:
+         - cfa/index.md
+         - 1 - Configuration de base des périphériques: cfa/1.md
     - Université:
       - Réseau: uni/reseau.md
       - Maths: uni/maths.md
       - Sécurité: uni/securite.md
     - Misc: misc.md
+
 
 theme:
   name: material
