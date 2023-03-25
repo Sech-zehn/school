@@ -1,25 +1,12 @@
-# Bienvenue dans mon bordel scolaire
+# Bienvenue!
 
-## Intro
+N'hesitez pas a ajouter / modiofier le contenu.
 
-Salut,
+Faites directement des commits dans le main mais svp:
 
-J'ai pour tradition de mettre en ligne tout ce que j'écris en cours.
-Ceci inclut mes comptes-rendus mais aussi notes, astuces etc.
+1. Commentez vos commits de facon claire
+2. Faites en sorte que la page soit finie au moment ou vous faites votre commit, ajoutez pas des moitiés de phrase ou des "A compléter"
 
-C'est **a prendre avec d'énormes pincettes**, mais ca peut toujours servir si t'es plus perché ou en retard que moi.
+Une Action va automatiquement recompiler le site web qui sera disponible dans la minute qui suit ici: [https://flaghunter01.github.io/school/](https://flaghunter01.github.io/school/)
 
-Si t'a un doute ou une correction, tu peux m'écrire et visiter mon GitHub avec les boutons en bas à droite de la page. plus on est à contribuer, plus ce sera complet et précis!
-
-## Organisation
-
-J'ai fait une page par matière séparées entre le CFA et l'université, ainsi qu'une page de misc pour tout ce que je n'ai pas pu trier.
-
-Hésite pas à te servir de la barre de recherche, elle est performante.
-
-## Participation
-
-Surtout n'hésite pas a contribuer, que ce soit pour modifier du contenu existant ou en rajouter du nouveau.
-Par contre je te demanderai de le faire dans une branche séparée et de demander un merge une fois que tu as fini, sinon ce sera vite le bordel.
-
-Bonne galère :blue_heart:
+Je vais aussi faire des release régulièrement pour qu'on puisse télécharger le site et l'utiliser en mode hors-ligne (il est opti pour ca) dans le cas où on n'aurait pas le droit a Internet. 
