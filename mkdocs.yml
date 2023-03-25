@@ -107,7 +107,7 @@ plugins:
   # Blog. Required arborescence: https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#built-in-blog-plugin
   #- blog
   # Table of contents keeps the formating (icons, underline etc)
-  - typeset
+  #- typeset
 
 
   # Revision date info for GitHub repos TODO: uncomment if repo
