@@ -113,7 +113,7 @@ plugins:
   # Revision date info for GitHub repos TODO: uncomment if repo
   - git-revision-date-localized:
       enable_creation_date: true
-      fallback_to_build_date: true
+      #fallback_to_build_date: true
   - git-committers:
       repository: FlagHunter01/school
       branch: main
