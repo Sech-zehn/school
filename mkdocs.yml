@@ -99,7 +99,7 @@ theme:
 
 plugins:
   # Self-host all ressources aka fonts, icons etc (RGPD)
-  - privacy
+  #- privacy
   # Client side search
   - search
   # Social cards - previews on social networks
