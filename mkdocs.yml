@@ -9,9 +9,9 @@ copyright: Copyright &copy; 2015 - 2023 Tim FROLOV
 # URL of the site
 site_url: https://flaghunter01.github.io/school
 # URL of the GitHub repo TODO: customize
-#repo_url: https://github.com/flaghunter01/school
+repo_url: https://github.com/flaghunter01/school
 # Name of the repo TODO: customize
-#repo_name: squidfunk/mkdocs-material
+repo_name: FlagHunter01/school
 
 
 
@@ -111,12 +111,13 @@ plugins:
 
 
   # Revision date info for GitHub repos TODO: uncomment if repo
-  #- git-revision-date-localized
-    #enable_creation_date: true
-    #fallback_to_build_date: true
-  #- git-committers:
-  #    repository: squidfunk/mkdocs-material
-  #    branch: main
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - git-committers:
+      repository: FlagHunter01/school
+      branch: main
+  - git-authors
   # Optimize for offline use
   #- offline
 
