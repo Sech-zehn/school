@@ -1,8 +1,19 @@
+# Displayed title TODO: customize
 site_name: School
-site_description: Bienvenue dans mon bordel
+# General description
+site_description: Mon bazar scolaire
+# Author of the site
 site_author: Tim FROLOV
-copyright: Copyright &copy; 2015 - 2022 Tim FROLOV
-site_url: http://school.frolov.eu
+# Copyright notice in the footer
+copyright: Copyright &copy; 2015 - 2023 Tim FROLOV
+# URL of the site
+site_url: https://flaghunter01.github.io/school
+# URL of the GitHub repo TODO: customize
+#repo_url: https://github.com/flaghunter01/school
+# Name of the repo TODO: customize
+#repo_name: squidfunk/mkdocs-material
+
+
 
 nav:
     - Acceuil: index.md
@@ -16,74 +27,159 @@ nav:
     - Misc: misc.md
 
 theme:
-    name: 'material'
-    language: en
-    icon:
-        logo: material/school
-        repo: fontawesome/brands/github
-    palette:
-        scheme: slate
-        primary: deep purple
-        accent: pink
-    font:
-        text: Roboto
-        code: Roboto Mono
-    features:
-        - content.code.annotate
-        - content.tabs.link
-        - content.tooltips
-        - navigation.instant
-        - navigation.tracking
-        - navigation.tabs
-        - navigation.top
-        - search.suggest
-        - search.highlight
+  name: material
 
-markdown_extensions:
-    - pymdownx.superfences
-    - pymdownx.tabbed:
-        alternate_style: true
-    - pymdownx.highlight:
-        anchor_linenums: true
-    - pymdownx.inlinehilite
-    - pymdownx.snippets
-    - admonition
-    - codehilite
-    - toc:
-        permalink: true
-    - pymdownx.details
-    - pymdownx.mark
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - pymdownx.superfences
-    - pymdownx.arithmatex:
-        generic: true
-    - footnotes
-    - pymdownx.critic
-    - pymdownx.caret
-    - pymdownx.keys
-    - pymdownx.mark
-    - pymdownx.tilde
-    - attr_list
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-    - attr_list
-    - md_in_html
-    - abbr
-    - attr_list
-    - pymdownx.snippets
+  # 1 per project (HTML5 limitation)
+  language: en
+
+  logo: assets/logo.png
+  #icon:
+  #  logo: fontawesome/solid/rocket
+  favicon: assets/logo.png
+
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+
+  features:
+    # Copy to clipboard button in code blocks
+    - content.code.copy
+    # Next and previous buttons in footer
+    - navigation.footer
+    # Monopage architecture (TODO: does it work?)
+    - navigation.instant
+    # Update URL with current anchor
+    - navigation.tracking
+    # Show tabs in the top menu
+    - navigation.tabs
+    # Show tabs in the left menu
+    - navigation.sections
+    # Auto-expand left menu
+    - navigation.expand
+    # Breadcrumbs displayed on top of the page
+    - navigation.path
+    # First page of section serves as a preview (https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages)
+    - navigation.indexes
+    # Autoscroll menus so the current page is allways visible
+    - toc.follow
+    # Back to top button
+    - navigation.top
+    # Search auto completion
+    - search.suggest
+    # Hightlight search results
+    - search.highlight
+    # Link content tabs togeather across the page
+    - content.tabs.link
+    # Better tooltips
+    - content.tooltips
+
 
 plugins:
-    - search:
-        lang:
-        - en
+  # Self-host all ressources aka fonts, icons etc (RGPD)
+  - privacy
+  # Client side search
+  - search
+  # Social cards - previews on social networks
+  #- social
+  # Blog. Required arborescence: https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#built-in-blog-plugin
+  #- blog
+  # Table of contents keeps the formating (icons, underline etc)
+  - typeset
+
+
+  # Revision date info for GitHub repos TODO: uncomment if repo
+  #- git-revision-date-localized
+    #enable_creation_date: true
+    #fallback_to_build_date: true
+  #- git-committers:
+  #    repository: squidfunk/mkdocs-material
+  #    branch: main
+  # Optimize for offline use
+  #- offline
+
 
 extra:
+  # Page status that can be displayed
+  status:
+    new: New
+    deprecated: Deprecated
+  # Social links in the footer
   social:
-    - icon: material/email-edit
-      link: mailto:<admin@frolov.eu>
-      name: admin@frolov.eu
-    - icon: material/github
-      link: https://github.com/FlagHunter01/school/
-      name: FlagHunter01 on GitHub
+    - icon: fontawesome/brands/github
+      link: https://github.com/flaghunter01/
+  # Main logo link URL. site_url by default
+  #homepage: site_url
+
+
+  # Multiple languages support
+  #alternate:
+  #   - name: English
+  #     link: /en/
+  #     lang: en
+  #   - name: Français
+  #     link: /fr/
+  #     lang: fr
+
+markdown_extensions:
+  # Support for admonitions
+  - admonition
+  # Annotations, grids, buttons, tooltips, colored icons, image alignment and lazy images
+  - attr_list
+  # Add footnotes
+  - footnotes
+  # Allows the useagse of HTML
+  - md_in_html
+  # Generates tables of content.
+  - toc:
+      # Visible anchor
+      permalink: ⚓︎
+  # Draw tables
+  - tables
+  # Underline and superscript
+  - pymdownx.caret
+  # Hightlight
+  - pymdownx.mark
+  # Subscript and deleted
+  - pymdownx.tilde
+  # make admonitions colabseable
+  - pymdownx.details
+  # Emoji support
+  #- pymdownx.emoji:
+  #    emoji_index: !!python/name:materialx.emoji.twemoji
+  #    emoji_generator: !!python/name:materialx.emoji.to_svg
+  # Highlight code blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+  # Nesting of just about everything
+  - pymdownx.superfences
+  # Draw keys
+  - pymdownx.keys
+  # Separate content into different tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Taxk lists
+  - pymdownx.tasklist:
+      custom_checkbox: true
