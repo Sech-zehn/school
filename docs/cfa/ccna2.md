@@ -40,3 +40,23 @@ Pour modifier le chemin du BOOT:
 ```
 BOOT=flash:<chemin>
 ```
+
+### 1.1.6 - Exemple de configuration pour contrôle a distance
+
+!!! tip "SVI = Switch Virtual Interface"
+    Il s'agit de l'interface de management a distance
+
+```
+conf t
+ip default-gateway 172.17.99.1
+int vlan 99
+ip address 172.17.99.11 255.255.255.0
+ipv6 address 2001:db8:acad:99::1/64
+no shut
+show ip interface brief
+show ipv6 interface brief
+end
+wr
+```
+
+###
