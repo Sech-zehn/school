@@ -141,7 +141,7 @@ sar iostat mpstat pidstat vmstat
 
 recharger conf: sighup
 arret brutal sigkill
-terminer gentiement 
+terminer gentiement
 
 créer zombie: (sleep 1 & exec /bin/sleep 100)&
 
@@ -152,8 +152,8 @@ exec permet de remplacer le bash par le processus qu'on lance
 
 ## Exécution
 
-|| exécuter la commande 2 si la 1 est morte 
-&& exécuter la commande 2 si la 1 est morte 
+|| exécuter la commande 2 si la 1 est morte
+&& exécuter la commande 2 si la 1 est morte
 (?)
 
 ## Variables d'environnement
@@ -236,7 +236,7 @@ You need to modify it or change it from “read-only” mode to “read-write”
 F10
 démarrer
 Mount –n – o remount,rw /
-Monter le systéme defichier de la racine 
+Monter le systéme defichier de la racine
 Passwd root
 Reinitialize de root
 Passwd victor

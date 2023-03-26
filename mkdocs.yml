@@ -18,6 +18,7 @@ repo_name: FlagHunter01/school
 nav:
     - Acceuil: index.md
     - CFA:
+      - Sécurité: cfa/secu.md
       - CCNA 1: cfa/ccna1.md
       - CCNA 2:
          - cfa/index.md
