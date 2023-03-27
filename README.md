@@ -1,3 +1,5 @@
+[![pages-build-deployment](https://github.com/FlagHunter01/school/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/FlagHunter01/school/actions/workflows/pages/pages-build-deployment)
+
 # Bienvenue!
 
 N'hesitez pas a ajouter / modiofier le contenu.
