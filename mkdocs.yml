@@ -24,6 +24,7 @@ nav:
          - cfa/index.md
          - 1 - Configuration de base des périphériques: cfa/1.md
          - 2 - Concepts de Commutation: cfa/2.md
+         - 3 - VLANs: cfa/3.md
     - Université:
       - Réseau: uni/reseau.md
       - Maths: uni/maths.md
