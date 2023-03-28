@@ -1,4 +1,4 @@
-!!! info "Le site est hebergé directement sur Github"
+!!! tip "Le site est hebergé directement sur Github"
     [![ci](https://github.com/FlagHunter01/school/actions/workflows/ci.yml/badge.svg)](https://github.com/FlagHunter01/school/actions/workflows/ci.yml)
     [![pages-build-deployment](https://github.com/FlagHunter01/school/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/FlagHunter01/school/actions/workflows/pages/pages-build-deployment)
 
