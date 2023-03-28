@@ -12,6 +12,8 @@ site_url: https://flaghunter01.github.io/school
 repo_url: https://github.com/flaghunter01/school
 # Name of the repo TODO: customize
 repo_name: FlagHunter01/school
+# URL of docs folder FIXME: comment if help not wanted!
+edit_uri: edit/main/docs/
 
 
 
@@ -105,6 +107,8 @@ theme:
     - content.tabs.link
     # Better tooltips
     - content.tooltips
+    # Link to source code
+    - content.action.edit
 
 
 plugins:

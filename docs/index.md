@@ -2,7 +2,7 @@
     [![ci](https://github.com/FlagHunter01/school/actions/workflows/ci.yml/badge.svg)](https://github.com/FlagHunter01/school/actions/workflows/ci.yml)
     [![pages-build-deployment](https://github.com/FlagHunter01/school/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/FlagHunter01/school/actions/workflows/pages/pages-build-deployment)
 
-    On peut faire des modifications **en live** en éditant [le projet associé](https://github.com/FlagHunter01/school).
+    On peut faire des modifications **en live** en éditant [le projet associé](https://github.com/FlagHunter01/school) grâce aux icones :material-file-document-edit-outline:.
 
 # Bienvenue dans mon bordel scolaire
 
