@@ -23,6 +23,7 @@ nav:
       - CCNA 2:
          - cfa/index.md
          - 1 - Configuration de base des périphériques: cfa/1.md
+         - 2 - Concepts de Commutation: cfa/2.md
     - Université:
       - Réseau: uni/reseau.md
       - Maths: uni/maths.md
