@@ -18,7 +18,7 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install git+https://${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}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install mkdocs-material
       - run: pip install pillow cairosvg
       - run: pip install lxml
       - run: pip install pillow cairosvg
