@@ -28,7 +28,7 @@ nav:
          - 2 - Concepts de Commutation: cfa/2.md
          - 3 - VLANs: cfa/3.md
          - 4 - Routage inter-VLAN: cfa/4.md
-         - 5 - Concepts du STP: cfa/5.
+         - 5 - Concepts du STP: cfa/5.md
          - 6 - EtherChannel: cfa/6.md
     - Université:
       - Réseau: uni/reseau.md
