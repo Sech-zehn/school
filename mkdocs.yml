@@ -30,6 +30,7 @@ nav:
          - 4 - Routage inter-VLAN: cfa/4.md
          - 5 - Concepts du STP: cfa/5.md
          - 6 - EtherChannel: cfa/6.md
+         - 7 - DHCPv4: cfa/7.md
     - Université:
       - Réseau: uni/reseau.md
       - Maths: uni/maths.md
