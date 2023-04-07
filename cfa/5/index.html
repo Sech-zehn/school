@@ -1,0 +1,1123 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="La redondance dans une conception de réseau hiérarchique résout le problème d'un point de défaillance unique, mais elle peut créer un autre type de problème appelé boucles de couche 2.">
+      
+      
+        <meta name="author" content="Tim FROLOV">
+      
+      
+        <link rel="canonical" href="https://flaghunter01.github.io/school/cfa/5/">
+      
+      
+        <link rel="prev" href="../4/">
+      
+      
+        <link rel="next" href="../6/">
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>5 - Concepts du STP - School</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#512-protocole-stp-spanning-tree-protocol" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="School" class="md-header__button md-logo" aria-label="School" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            School
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5 - Concepts du STP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flaghunter01/school" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FlagHunter01/school
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Acceuil
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../secu/" class="md-tabs__link md-tabs__link--active">
+        CFA
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../uni/reseau/" class="md-tabs__link">
+        Université
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../misc/" class="md-tabs__link">
+      Misc
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="School" class="md-nav__button md-logo" aria-label="School" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    School
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flaghunter01/school" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FlagHunter01/school
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Acceuil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          CFA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          CFA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../secu/" class="md-nav__link">
+        Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccna1/" class="md-nav__link">
+        CCNA 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">CCNA 2</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          CCNA 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        1 - Configuration de base des périphériques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        2 - Concepts de Commutation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        3 - VLANs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        4 - Routage inter-VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5 - Concepts du STP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        5 - Concepts du STP
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#512-protocole-stp-spanning-tree-protocol" class="md-nav__link">
+    5.1.2 - Protocole STP (Spanning Tree Protocol)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#521-etapes-vers-une-topologie-sans-boucle" class="md-nav__link">
+    5.2.1 - Étapes vers une topologie sans boucle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#522-1-choisir-le-pont-racine" class="md-nav__link">
+    5.2.2 - 1. Choisir le pont racine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#523-consequences-des-bid-par-defaut" class="md-nav__link">
+    5.2.3 - Conséquences des BID par défaut
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#525-choisir-les-ports-racine" class="md-nav__link">
+    5.2.5 - Choisir les ports racine.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#526-3-choisir-les-ports-designes" class="md-nav__link">
+    5.2.6 - 3. Choisir les ports désignés.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#528-choisir-un-port-racine-a-partir-de-plusieurs-chemins-dacces-a-cout-egal" class="md-nav__link">
+    5.2.8 - Choisir un port racine à partir de plusieurs chemins d'accès à coût égal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#529-stp-minuteurs-et-etats-des-ports" class="md-nav__link">
+    5.2.9 - STP minuteurs et états des ports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#532-concepts-rstp" class="md-nav__link">
+    5.3.2 - Concepts RSTP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#533-etats-de-port-rstp-et-roles-de-port" class="md-nav__link">
+    5.3.3 - États de port RSTP et rôles de port
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#534-portfast-et-protection-bpdu" class="md-nav__link">
+    5.3.4 - PortFast et protection BPDU
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6/" class="md-nav__link">
+        6 - EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7/" class="md-nav__link">
+        7 - DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8/" class="md-nav__link">
+        8 - SLAAC et DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Université
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Université
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uni/reseau/" class="md-nav__link">
+        Réseau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uni/maths/" class="md-nav__link">
+        Maths
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uni/securite/" class="md-nav__link">
+        Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/" class="md-nav__link">
+        Misc
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#512-protocole-stp-spanning-tree-protocol" class="md-nav__link">
+    5.1.2 - Protocole STP (Spanning Tree Protocol)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#521-etapes-vers-une-topologie-sans-boucle" class="md-nav__link">
+    5.2.1 - Étapes vers une topologie sans boucle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#522-1-choisir-le-pont-racine" class="md-nav__link">
+    5.2.2 - 1. Choisir le pont racine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#523-consequences-des-bid-par-defaut" class="md-nav__link">
+    5.2.3 - Conséquences des BID par défaut
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#525-choisir-les-ports-racine" class="md-nav__link">
+    5.2.5 - Choisir les ports racine.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#526-3-choisir-les-ports-designes" class="md-nav__link">
+    5.2.6 - 3. Choisir les ports désignés.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#528-choisir-un-port-racine-a-partir-de-plusieurs-chemins-dacces-a-cout-egal" class="md-nav__link">
+    5.2.8 - Choisir un port racine à partir de plusieurs chemins d'accès à coût égal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#529-stp-minuteurs-et-etats-des-ports" class="md-nav__link">
+    5.2.9 - STP minuteurs et états des ports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#532-concepts-rstp" class="md-nav__link">
+    5.3.2 - Concepts RSTP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#533-etats-de-port-rstp-et-roles-de-port" class="md-nav__link">
+    5.3.3 - États de port RSTP et rôles de port
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#534-portfast-et-protection-bpdu" class="md-nav__link">
+    5.3.4 - PortFast et protection BPDU
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/flaghunter01/school/edit/main/docs/cfa/5.md" title="Editer cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>5 - Concepts du STP</h1>
+
+<h2 id="512-protocole-stp-spanning-tree-protocol">5.1.2 - Protocole STP (Spanning Tree Protocol)<a class="headerlink" href="#512-protocole-stp-spanning-tree-protocol" title="Permanent link">⚓︎</a></h2>
+<p>Le protocole STP est un protocole réseau de prévention des boucles qui permet la redondance tout en créant une topologie de couche 2 sans boucle. IEEE 802.1D est la norme IEEE MAC Bridging d'origine pour STP.</p>
+<h2 id="521-etapes-vers-une-topologie-sans-boucle">5.2.1 - Étapes vers une topologie sans boucle<a class="headerlink" href="#521-etapes-vers-une-topologie-sans-boucle" title="Permanent link">⚓︎</a></h2>
+<p>À l'aide de l’algorithme spanning tree (STA), le protocole STP crée une topologie sans boucle en quatre étapes:</p>
+<ul>
+<li>Choisir le pont racine</li>
+<li>Choisir les ports racine.</li>
+<li>Choisir les ports désignés.</li>
+<li>Choisir des ports alternatifs (bloqués).</li>
+</ul>
+<p>Pendant le fonctionnement de STA et de STP, les commutateurs utilisent des BPDU (Bridge Protocol Data Units) pour partager des informations sur eux-mêmes et sur leurs connexions. Les BPDU permettent de choisir le pont racine, les ports racine, les ports désignés et les ports alternatifs. Chaque trame BPDU contient un ID de pont (bridge ID) qui identifie le commutateur ayant envoyé la trame BPDU. Le BID participe à la prise de nombreuses décisions STA, y compris les rôles de pont racine et de port. Comme illustré dans la figure , l'ID de pont (BID) contient une valeur de priorité, l'adresse MAC du commutateur et un ID système étendu. La valeur d'ID de pont la plus basse est déterminée par une combinaison de ces trois champs.</p>
+<h2 id="522-1-choisir-le-pont-racine">5.2.2 - 1. Choisir le pont racine<a class="headerlink" href="#522-1-choisir-le-pont-racine" title="Permanent link">⚓︎</a></h2>
+<p>Le commutateur ayant l'identificateur de pont (BID) le plus bas devient le pont racine. Initialement, tous les commutateurs se déclarent en tant que pont racine avec son propre BID défini comme l'ID racine. Finalement, les commutateurs apprennent par l'échange de BPDU quel commutateur possède le BID le plus bas et se mettent au courant d'un pont racine.</p>
+<h2 id="523-consequences-des-bid-par-defaut">5.2.3 - Conséquences des BID par défaut<a class="headerlink" href="#523-consequences-des-bid-par-defaut" title="Permanent link">⚓︎</a></h2>
+<p>Étant donné que le BID par défaut est 32768, il est possible que deux commutateurs ou plusieurs aient la même priorité. Dans ce scénario, où les priorités sont identiques, le commutateur ayant l'adresse MAC la plus basse deviendra le pont racine. Pour garantir que la décision relative au pont racine répond au mieux aux besoins du réseau, il est recommandé que l'administrateur configure le commutateur pont racine souhaité avec une priorité inférieure.</p>
+<h2 id="525-choisir-les-ports-racine">5.2.5 - Choisir les ports racine.<a class="headerlink" href="#525-choisir-les-ports-racine" title="Permanent link">⚓︎</a></h2>
+<p>Une fois que le pont racine a été défini, l'algorithme STA est utilisé pour sélectionner le port racine. Chaque commutateur non-root sélectionnera un port racine. Le port racine est le port le plus proche du pont racine en termes de coûts généraux (meilleur chemin) vers le pont racine. Ce coût général est connu sous le nom de coût du chemin racine interne.</p>
+<p>Le coût du chemin racine interne équivaut à la somme des coûts de tous les ports le long du chemin vers le pont racine.</p>
+<h2 id="526-3-choisir-les-ports-designes">5.2.6 - 3. Choisir les ports désignés.<a class="headerlink" href="#526-3-choisir-les-ports-designes" title="Permanent link">⚓︎</a></h2>
+<p>La partie de prévention des boucles du spanning tree devient évidente au cours de ces deux prochaines étapes. Une fois que chaque commutateur sélectionne un port racine, les commutateurs sélectionnent ensuite les ports désignés.</p>
+<p>Chaque segment entre deux commutateurs aura un port désigné. Le port désigné est un port sur le segment (avec deux commutateurs) qui a le coût du chemin racine interne vers le pont racine. En d'autres termes, le port désigné a le meilleur chemin pour recevoir le trafic qui conduit au pont racine.</p>
+<p>Ce qui n'est pas un port racine ou un port désigné devient un port alternatif ou bloqué. Le résultat final est un chemin unique entre chaque commutateur et le pont racine.</p>
+<h2 id="528-choisir-un-port-racine-a-partir-de-plusieurs-chemins-dacces-a-cout-egal">5.2.8 - Choisir un port racine à partir de plusieurs chemins d'accès à coût égal<a class="headerlink" href="#528-choisir-un-port-racine-a-partir-de-plusieurs-chemins-dacces-a-cout-egal" title="Permanent link">⚓︎</a></h2>
+<p>Lorsqu'un commutateur possède plusieurs chemins d'accès à coût égal vers le pont racine, le commutateur détermine un port en utilisant les critères suivants:</p>
+<ul>
+<li>BID de pont expéditeur le plus faible</li>
+<li>Priorité de port la plus faible</li>
+<li>ID de port expéditeur le plus faible</li>
+</ul>
+<h2 id="529-stp-minuteurs-et-etats-des-ports">5.2.9 - STP minuteurs et états des ports<a class="headerlink" href="#529-stp-minuteurs-et-etats-des-ports" title="Permanent link">⚓︎</a></h2>
+<p>La convergence STP nécessite trois minuteurs, comme suit:</p>
+<ul>
+<li>Minuteur Hello - le minuteur Hello est l'intervalle entre les mises à jour BPDU. La valeur par défaut est 2 secondes, mais les valeurs autorisées peut être modifier entre 1 et 10 secondes.</li>
+<li>Minuteur Forward Delay - le minuteur Forward Delay est le temps passé à l'état d'écoute et d'apprentissage. La valeur par défaut est de 15 secondes mais peut être modifiée entre 4 et 30 secondes.</li>
+<li>Minuteur Max Age - le minuteur Max Age est la durée maximale d'attente d'un commutateur avant de tenter de modifier la topologie STP. La valeur par défaut est 20 secondes mais peut être modifiée entre 6 et 40 secondes.</li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">Remarque</p>
+<p>Les durées par défaut peuvent être modifiées sur le pont racine, ce qui dicte la valeur de ces minuteurs pour le domaine STP.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th align="center">État du port</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Blocage</td>
+<td align="left">Le port est un port alternatif qui ne participe pas au transmission de trames. Le port reçoit des trames BPDU pour déterminer l'emplacement et l'ID racine du pont racine. Les trames BPDU déterminent également les rôles de port de chaque port de commutateur doit assumer dans la topologie STP active finale. Grâce au minuteur Max age de 20 secondes, un port de commutateur qui n'a pas reçu un BPDU attendu d'un commutateur voisin passera à l'état de blocage.</td>
+</tr>
+<tr>
+<td align="center">Écoute</td>
+<td align="left">Après l'état de blocage, un port passe à l'état d'écoute. Le port reçoit des BPDU pour déterminer le chemin d'accès à la racine. le port de commutateur transmet également ses propres trames BPDU et informe les commutateurs adjacents que le port du commutateur se prépare à participer à la topologie active.</td>
+</tr>
+<tr>
+<td align="center">Apprentissage</td>
+<td align="left">Un port de commutateur passe à l'état d'apprentissage après l'état d'écoute. Pendant l'état d'apprentissage, le port du commutateur reçoit et traite les BPDU et se prépare à participer à la transmission de trame. Il commence également à remplir la table d'adresses MAC. Cependant, dans l'état d'apprentissage, les trames d'utilisateur ne sont pas transférées vers la destination.</td>
+</tr>
+<tr>
+<td align="center">Acheminement</td>
+<td align="left">Dans l'état d'acheminement, un port de commutateur est considéré comme une partie du topologie. Le port du commutateur transfère le trafic utilisateur et envoie et reçoit les trames BPDU.</td>
+</tr>
+<tr>
+<td align="center">Désactivation</td>
+<td align="left">Un port de commutateur à l'état Désactivation ne participe pas à l'arbre recouvrant et ne transmet pas les trames. L'état Désactivation est défini lorsque le port de commutateur est administrativement désactivé.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="532-concepts-rstp">5.3.2 - Concepts RSTP<a class="headerlink" href="#532-concepts-rstp" title="Permanent link">⚓︎</a></h2>
+<p>RSTP (IEEE 802.1w) remplace le protocole 802.1D d'origine, tout en conservant la rétrocompatibilité. La terminologie du protocole STP 802.1w est essentiellement la même que celle du protocole STP IEEE 802.1D initial. La plupart des paramètres ont été conservés. les utilisateurs déjà familiarisés avec la norme STP d'origine puissent rapidement configurer le protocole RSTP. Le même algorithme de spanning tree est utilisé pour STP et RSTP pour déterminer les rôles de port et la topologie.</p>
+<p>Le protocole RSTP optimise le recalcul de l'arbre recouvrant lorsque la topologie d'un réseau de couche 2 change. Le protocole RSTP assure un temps de convergence beaucoup plus rapide dans un réseau correctement configuré, parfois de l'ordre de quelques centaines de millisecondes. Si un port est configuré comme port alternatif, il peut passer immédiatement à l'état de transmission sans attendre que le réseau converge.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Remarque</p>
+<p>Rapid PVST+ est l'implémentation Cisco du protocole RSTP par VLAN. En utilisant le protocole Rapid PVST+ une instance indépendante s'exécute sur chaque VLAN.</p>
+</div>
+<h2 id="533-etats-de-port-rstp-et-roles-de-port">5.3.3 - États de port RSTP et rôles de port<a class="headerlink" href="#533-etats-de-port-rstp-et-roles-de-port" title="Permanent link">⚓︎</a></h2>
+<p>Comme le montre la figure, il n'y a que trois états de port dans le RSTP qui correspondent aux trois états opérationnels possibles dans le STP. Les états de désactivation, de blocage et d'écoute de la 802.1D sont fusionnés en un état unique de suppression de la 802.1w.</p>
+<p>Le port alternatif a un chemin d'accès alternatif au pont racine. Le port de secours est une veille sur un support partagé, tel qu'un concentrateur. Un port de secours est moins commun car les concentrateurs sont désormais considérés comme des périphériques anciens.</p>
+<h2 id="534-portfast-et-protection-bpdu">5.3.4 - PortFast et protection BPDU<a class="headerlink" href="#534-portfast-et-protection-bpdu" title="Permanent link">⚓︎</a></h2>
+<p>L'objectif de la fonction PortFast étant de minimiser le temps d'attente des ports d'accès avant la convergence Spanning Tree, elle doit être utilisée uniquement sur les ports d'accès. Si vous activez PortFast sur un port connecté à un autre commutateur, vous risquez de créer une boucle Spanning Tree. PortFast est uniquement destiné aux ports de commutateur qui se connectent aux périphériques terminaux.</p>
+<p>Lorsqu'un port de commutateur est configuré avec PortFast, ce port passe de l'état de blocage à l'état d'acheminement immédiatement, sans passer par les autres états 802.1D STP habituels (écoute et apprentissage) et en évitant un délai de 30 secondes.
+Vous pouvez utiliser PortFast sur les ports d'accès pour permettre aux appareils connectés à ces ports, tels que les clients DHCP, d'accéder immédiatement au réseau, plutôt que d'attendre que le STP IEEE 802.1D converge sur chaque VLAN. </p>
+<p>Dans une configuration PortFast valide, les trames BPDU ne doivent jamais être reçues sur les ports des commutateurs activés par PortFast, car cela indiquerait qu'un autre pont ou commutateur est connecté au port. Cela provoque potentiellement une boucle de spanning tree. Pour éviter ce type de scénario, les commutateurs Cisco prennent en charge une fonctionnalité appelée Protection BPDU. Lorsqu'elle est activée, la protection BPDU place immédiatement le port à l'état errdisabled (erreur désactivée) lors de la réception d'une trame BPDU. Cela protège contre les boucles potentielles en arrêtant efficacement le port. La fonction de protection BPDU offre une réponse sécurisée aux configurations non valides, car un administrateur doit remettre manuellement l'interface en service.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Dernière mise à jour:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 7, 2023</span>
+      
+        <br>
+        Créé:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 7, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../4/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 4 - Routage inter-VLAN" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                4 - Routage inter-VLAN
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../6/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 6 - EtherChannel" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                6 - EtherChannel
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2015 - 2023 Tim FROLOV
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/flaghunter01/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+    
+  </body>
+</html>

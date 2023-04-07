@@ -1,0 +1,2087 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mon bazar scolaire">
+      
+      
+        <meta name="author" content="Tim FROLOV">
+      
+      
+        <link rel="canonical" href="https://flaghunter01.github.io/school/uni/reseau/">
+      
+      
+        <link rel="prev" href="../../cfa/8/">
+      
+      
+        <link rel="next" href="../maths/">
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>Réseau - School</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cours-de-reseaux" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="School" class="md-header__button md-logo" aria-label="School" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            School
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Réseau
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flaghunter01/school" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FlagHunter01/school
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Acceuil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cfa/secu/" class="md-tabs__link">
+        CFA
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Université
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../misc/" class="md-tabs__link">
+      Misc
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="School" class="md-nav__button md-logo" aria-label="School" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    School
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flaghunter01/school" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FlagHunter01/school
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Acceuil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          CFA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          CFA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/secu/" class="md-nav__link">
+        Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/ccna1/" class="md-nav__link">
+        CCNA 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../cfa/">CCNA 2</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          CCNA 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/1/" class="md-nav__link">
+        1 - Configuration de base des périphériques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/2/" class="md-nav__link">
+        2 - Concepts de Commutation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/3/" class="md-nav__link">
+        3 - VLANs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/4/" class="md-nav__link">
+        4 - Routage inter-VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/5/" class="md-nav__link">
+        5 - Concepts du STP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/6/" class="md-nav__link">
+        6 - EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/7/" class="md-nav__link">
+        7 - DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cfa/8/" class="md-nav__link">
+        8 - SLAAC et DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Université
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Université
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Réseau
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Réseau
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#td1" class="md-nav__link">
+    TD1
+  </a>
+  
+    <nav class="md-nav" aria-label="TD1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4" class="md-nav__link">
+    Exercice 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-5" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-1" class="md-nav__link">
+    Partie 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-2" class="md-nav__link">
+    Partie 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-3" class="md-nav__link">
+    Partie 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-6" class="md-nav__link">
+    Exercice 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-7" class="md-nav__link">
+    Exercice 7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-8" class="md-nav__link">
+    Exercice 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-9" class="md-nav__link">
+    Exercice 9
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td2" class="md-nav__link">
+    TD2
+  </a>
+  
+    <nav class="md-nav" aria-label="TD2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2_1" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3_1" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4_1" class="md-nav__link">
+    Exercice 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-5_1" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-1_1" class="md-nav__link">
+    Partie 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-2_1" class="md-nav__link">
+    Partie 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-6_1" class="md-nav__link">
+    Exercice 6
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice 6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-1_2" class="md-nav__link">
+    Partie 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-2_2" class="md-nav__link">
+    Partie 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-7_1" class="md-nav__link">
+    Exercice 7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-8_1" class="md-nav__link">
+    Exercice 8
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td3" class="md-nav__link">
+    TD3
+  </a>
+  
+    <nav class="md-nav" aria-label="TD3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2_2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3_2" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4_2" class="md-nav__link">
+    Exercice 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-5_2" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-6_2" class="md-nav__link">
+    Exercice 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-7_2" class="md-nav__link">
+    Exercice 7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td4" class="md-nav__link">
+    TD4
+  </a>
+  
+    <nav class="md-nav" aria-label="TD4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prise-en-main" class="md-nav__link">
+    Prise en main
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-de-ports" class="md-nav__link">
+    Filtrage de ports
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtrage de ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2_3" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3_3" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suivi-de-connexion-conntrack" class="md-nav__link">
+    Suivi de connexion (conntrack)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td5" class="md-nav__link">
+    TD5
+  </a>
+  
+    <nav class="md-nav" aria-label="TD5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1_1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2_4" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maths/" class="md-nav__link">
+        Maths
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../securite/" class="md-nav__link">
+        Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/" class="md-nav__link">
+        Misc
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#td1" class="md-nav__link">
+    TD1
+  </a>
+  
+    <nav class="md-nav" aria-label="TD1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4" class="md-nav__link">
+    Exercice 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-5" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-1" class="md-nav__link">
+    Partie 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-2" class="md-nav__link">
+    Partie 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-3" class="md-nav__link">
+    Partie 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-6" class="md-nav__link">
+    Exercice 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-7" class="md-nav__link">
+    Exercice 7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-8" class="md-nav__link">
+    Exercice 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-9" class="md-nav__link">
+    Exercice 9
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td2" class="md-nav__link">
+    TD2
+  </a>
+  
+    <nav class="md-nav" aria-label="TD2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2_1" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3_1" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4_1" class="md-nav__link">
+    Exercice 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-5_1" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-1_1" class="md-nav__link">
+    Partie 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-2_1" class="md-nav__link">
+    Partie 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-6_1" class="md-nav__link">
+    Exercice 6
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice 6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-1_2" class="md-nav__link">
+    Partie 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-2_2" class="md-nav__link">
+    Partie 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-7_1" class="md-nav__link">
+    Exercice 7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-8_1" class="md-nav__link">
+    Exercice 8
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td3" class="md-nav__link">
+    TD3
+  </a>
+  
+    <nav class="md-nav" aria-label="TD3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2_2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3_2" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4_2" class="md-nav__link">
+    Exercice 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-5_2" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-6_2" class="md-nav__link">
+    Exercice 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-7_2" class="md-nav__link">
+    Exercice 7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td4" class="md-nav__link">
+    TD4
+  </a>
+  
+    <nav class="md-nav" aria-label="TD4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prise-en-main" class="md-nav__link">
+    Prise en main
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-de-ports" class="md-nav__link">
+    Filtrage de ports
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtrage de ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2_3" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3_3" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suivi-de-connexion-conntrack" class="md-nav__link">
+    Suivi de connexion (conntrack)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td5" class="md-nav__link">
+    TD5
+  </a>
+  
+    <nav class="md-nav" aria-label="TD5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1_1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2_4" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/flaghunter01/school/edit/main/docs/uni/reseau.md" title="Editer cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<div class="admonition note">
+<p class="admonition-title">MAJ le 14/09/2022 à 17h30</p>
+</div>
+<h1 id="cours-de-reseaux">Cours de réseaux<a class="headerlink" href="#cours-de-reseaux" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">OS utilisé</p>
+<p>Tout ce qui suit est fait sous Debian Bullseye en VM.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Configuration de la VM</p>
+<p>Il faut configurer la VM en mode "bridge" pour faire les TDs en LAN.</p>
+<p>Si tu utilises VirtualBox il faut:</p>
+<ul>
+<li>Aller dans la config de la VM,</li>
+<li>Aller dans <code>Réseau</code>,</li>
+<li>Pour l'interface qui sera utilisé pour communiquer avec la LAN, chosir "Mode d'accès réseau:" <code>Bridge</code> ou <code>Accès par pont</code>.</li>
+</ul>
+</div>
+<h2 id="td1">TD1<a class="headerlink" href="#td1" title="Permanent link">⚓︎</a></h2>
+<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">/etc/network/interfaces</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># This file describes the network interfaces available on your system</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># and how to activate them. For more information, see interfaces(5).</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">source</span><span class="w"> </span>/etc/network/interfaces.d/
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># The loopback network interface</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>auto<span class="w"> </span>lo
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>iface<span class="w"> </span>lo<span class="w"> </span>inet<span class="w"> </span>loopback
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>auto<span class="w"> </span>enp0s3
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>iface<span class="w"> </span>enp0s3<span class="w"> </span>inet<span class="w"> </span>static
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span>address<span class="w"> </span><span class="m">192</span>.168.42.69
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span>netmask<span class="w"> </span><span class="m">255</span>.255.255.0
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">#iface enp0s3 inet dhcp # (1)</span>
+</code></pre></div>
+<ol>
+<li>Commenter le paragraphe précédent et décommenter cette ligne pour retourner en DHCP rapidement!</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Clique sur les " + " pour plus d'explications</p>
+<p>Il y en a un à la dernière ligne du bloc précédent.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>systemctrl restart networking
+</code></pre></div>
+<details class="note" open="open">
+<summary>Si le réseau ne fonctionne pas</summary>
+<ul>
+<li>Vérifie avec <code>ip a</code> que la carte est UP,<ul>
+<li>Si elle est down, <code>ifup enp0s3</code></li>
+</ul>
+</li>
+<li>Parfois, il faut rebooter l'ordi.</li>
+</ul>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>apt install net-tools
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>netstat -in
+</code></pre></div>
+<p>Sur une VM Debian vierge, on voit:</p>
+<ul>
+<li><code>enp0s3</code>: carte réseau de la machine. Aucune erreur de chaque type.</li>
+<li><code>lo</code>: boucle virtuelle sur soi-même. Aucune erreur de chaque type.</li>
+</ul>
+<h3 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Configuration pérenne faite à l'<a href="#exercice-2">exercice 2</a>.</p>
+</div>
+<h3 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ping 192.168.42.n
+</code></pre></div>
+<h3 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h3>
+<h4 id="partie-1">Partie 1<a class="headerlink" href="#partie-1" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>arp
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Adresse                  TypeMap AdresseMat          Indicateurs           Iface
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>_gateway                 ether   52:54:00:12:35:02   C                     enp0s3
+</code></pre></div>
+<h4 id="partie-2">Partie 2<a class="headerlink" href="#partie-2" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ip neigh flush all
+</code></pre></div>
+<h4 id="partie-3">Partie 3<a class="headerlink" href="#partie-3" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ping 192.168.42.n
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>arp
+</code></pre></div>
+<h3 id="exercice-6">Exercice 6<a class="headerlink" href="#exercice-6" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>apt instal tcpdump
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>tcpdump
+</code></pre></div>
+<p>Dans un autre terminal:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ifconfig
+</code></pre></div></p>
+<div class="admonition fail">
+<p class="admonition-title">Chez moi, la carte reste en MULTICAST</p>
+<p>D'après l'aide du programme, elle devrait être en PROMISC</p>
+</div>
+<h3 id="exercice-7">Exercice 7<a class="headerlink" href="#exercice-7" title="Permanent link">⚓︎</a></h3>
+<div class="admonition fail">
+<p class="admonition-title">Obsolète - préférer WireShark</p>
+</div>
+<h3 id="exercice-8">Exercice 8<a class="headerlink" href="#exercice-8" title="Permanent link">⚓︎</a></h3>
+<p>Le changement par rapport au hub est qu'on ne voit que les paquets qui sont destinés à notre hôte.</p>
+<h3 id="exercice-9">Exercice 9<a class="headerlink" href="#exercice-9" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ping 192.168.42.255
+</code></pre></div>
+<h2 id="td2">TD2<a class="headerlink" href="#td2" title="Permanent link">⚓︎</a></h2>
+<h3 id="exercice-2_1">Exercice 2<a class="headerlink" href="#exercice-2_1" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">/etc/network/interfaces</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># This file describes the network interfaces available on your system</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1"># and how to activate them. For more information, see interfaces(5).</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nb">source</span><span class="w"> </span>/etc/network/interfaces.d/*
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1"># The loopback network interface</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>auto<span class="w"> </span>lo
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>iface<span class="w"> </span>lo<span class="w"> </span>inet<span class="w"> </span>loopback
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>auto<span class="w"> </span>enp0s3
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>iface<span class="w"> </span>enp0s3<span class="w"> </span>inet<span class="w"> </span>static
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span>address<span class="w"> </span><span class="m">192</span>.168.1.9/28
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span>gateway<span class="w"> </span><span class="m">192</span>.168.1.62<span class="w"> </span><span class="c1"># (1)</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="c1">#iface enp0s3 inet dhcp</span>
+</code></pre></div>
+<ol>
+<li>Nécessaire pour pouvoir communiquer avec d'autres réseaux</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>systemctl restart networking.service
+</code></pre></div>
+<h3 id="exercice-3_1">Exercice 3<a class="headerlink" href="#exercice-3_1" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>netstat -rn
+</code></pre></div>
+<p>On en déduit que les paquets ne doivent effectuer aucun saut pour atteindre une addresse du même sous-réseau.</p>
+<h3 id="exercice-4_1">Exercice 4<a class="headerlink" href="#exercice-4_1" title="Permanent link">⚓︎</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Je n'ai pas fait cette partie</p>
+<p>Faudrait vérifier l'exactitude des commandes.</p>
+</div>
+<div class="highlight"><span class="filename">Sur le routeur</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>conf<span class="w"> </span>t
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>router<span class="w"> </span>rip
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>network<span class="w"> </span><span class="m">192</span>.168.1.0
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>network<span class="w"> </span><span class="m">192</span>.168.2.2
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>access-list<span class="w"> </span><span class="m">1</span><span class="w"> </span>permit<span class="w"> </span>any<span class="w"> </span>any<span class="w"> </span>any<span class="w"> </span><span class="c1"># (1)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>end
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>wr
+</code></pre></div>
+<ol>
+<li>Par défaut, une ACL implicite interdit tous les clients.</li>
+</ol>
+<h3 id="exercice-5_1">Exercice 5<a class="headerlink" href="#exercice-5_1" title="Permanent link">⚓︎</a></h3>
+<h4 id="partie-1_1">Partie 1<a class="headerlink" href="#partie-1_1" title="Permanent link">⚓︎</a></h4>
+<p>Il s'aigit de la dernière adresse du réseau.</p>
+<h4 id="partie-2_1">Partie 2<a class="headerlink" href="#partie-2_1" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ping 192.168.1.63
+</code></pre></div>
+<p>Il semblerait que la passerelle bloque les réponses ou les requêtes car c'est la seule a répondre.</p>
+<h3 id="exercice-6_1">Exercice 6<a class="headerlink" href="#exercice-6_1" title="Permanent link">⚓︎</a></h3>
+<p>Les deux sous-réseaux étant identiques, il serait logique de scinder la plage disponible en deux parts égales grâce à un masque à 25 bits.</p>
+<h4 id="partie-1_2">Partie 1<a class="headerlink" href="#partie-1_2" title="Permanent link">⚓︎</a></h4>
+<div class="admonition success">
+<p class="admonition-title">La configuration est basée sur l'<a href="#exercice-2_1">exercice 2</a>.</p>
+</div>
+<h4 id="partie-2_2">Partie 2<a class="headerlink" href="#partie-2_2" title="Permanent link">⚓︎</a></h4>
+<div class="admonition success">
+<p class="admonition-title">La configuration est basée sur l'<a href="#exercice-4_1">exercice 4</a>.</p>
+</div>
+<h3 id="exercice-7_1">Exercice 7<a class="headerlink" href="#exercice-7_1" title="Permanent link">⚓︎</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Voir <a href="#exercice-5_1">exercice 5</a>.</p>
+</div>
+<h3 id="exercice-8_1">Exercice 8<a class="headerlink" href="#exercice-8_1" title="Permanent link">⚓︎</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">A compléter</p>
+</div>
+<h2 id="td3">TD3<a class="headerlink" href="#td3" title="Permanent link">⚓︎</a></h2>
+<h3 id="exercice-2_2">Exercice 2<a class="headerlink" href="#exercice-2_2" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>ip route flush all
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>ip route show
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>ip route add 192.168.1.62 dev enp0s3
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>ip route add default via 192.168.1.62 dev enp0s3
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>ip route show
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Compléter avec WireShark.</p>
+</div>
+<h3 id="exercice-3_2">Exercice 3<a class="headerlink" href="#exercice-3_2" title="Permanent link">⚓︎</a></h3>
+<p>Le temps de réponse est plus grand quand on envoie une requête ping vers un réseau externe.
+Ceci est dû au saut supplémentaire causé par l'ajout du routeur dans le processus de requête.</p>
+<h3 id="exercice-4_2">Exercice 4<a class="headerlink" href="#exercice-4_2" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>netstat -an
+</code></pre></div>
+<p>pour une Debian vierge, seul <code>tcp 127.0.0.1:631</code> apparait.
+D'après /etc/services, ceci correspond au Intrnet Printing Protocol.</p>
+<h3 id="exercice-5_2">Exercice 5<a class="headerlink" href="#exercice-5_2" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>apt install rwho
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>rwho -a
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Analyse des trames à compléter.</p>
+</div>
+<h3 id="exercice-6_2">Exercice 6<a class="headerlink" href="#exercice-6_2" title="Permanent link">⚓︎</a></h3>
+<p>Telnet utilise le port 23.</p>
+<h3 id="exercice-7_2">Exercice 7<a class="headerlink" href="#exercice-7_2" title="Permanent link">⚓︎</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">A compléter.</p>
+</div>
+<h2 id="td4">TD4<a class="headerlink" href="#td4" title="Permanent link">⚓︎</a></h2>
+<div class="admonition info">
+<p class="admonition-title"><code>iptables</code> est obsolète et Netfilter déconseille de l'utiliser.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">J'ai fait un <a href="/misc/#iptables">memo sur la page misc</a> avec principe, commandes et modules!</p>
+</div>
+<h3 id="prise-en-main">Prise en main<a class="headerlink" href="#prise-en-main" title="Permanent link">⚓︎</a></h3>
+<p>Supprimer la règle d'une chaine:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>iptables -D [chaine] [règle]
+</code></pre></div>
+<p>Supprimer toutes les règles d'une chaine:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>iptables -F [chaine]
+</code></pre></div>
+<p>Supprimer une chaine:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>iptables<span class="w"> </span>-X<span class="w"> </span><span class="o">[</span>chaine<span class="o">]</span><span class="w"> </span><span class="c1"># (1)</span>
+</code></pre></div>
+<ol>
+<li>Attention, on ne peut pas supprimer les "chaines originales" (INPUT, FORWARD, OUTPUT etc).</li>
+</ol>
+<div class="admonition fail">
+<p class="admonition-title">Je n'ai pas de machine RedHat, et <code>iptables</code> n'a pas de fichier de configuration.</p>
+<p>Le contenu de <code>/etc/sysconfig/iptable</code> restera donc un mystère.</p>
+</div>
+<p><code>iptables</code>n'est pas reconnu en tant que service, donc la commande <code>service iptables</code> ne passera pas, mais la commande suivante est déjà très informative:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>iptables --help
+</code></pre></div>
+<p>On peut aussi regarder le man si on l'a téléchargé.</p>
+<h3 id="filtrage-de-ports">Filtrage de ports<a class="headerlink" href="#filtrage-de-ports" title="Permanent link">⚓︎</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Cette section n'a pas été vérifiée.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-J<span class="w"> </span>DROP
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>iptables<span class="w"> </span>-I<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-s<span class="w"> </span>n.n.n.n<span class="w"> </span>-J<span class="w"> </span>ACCEPT<span class="w"> </span><span class="c1"># (1)</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>iptables<span class="w"> </span>-F
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>iptables<span class="w"> </span>-N<span class="w"> </span>ssh
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-J<span class="w"> </span>ssh
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>iptables<span class="w"> </span>-A<span class="w"> </span>ssh<span class="w"> </span>-s<span class="w"> </span>n.n.n.n<span class="w"> </span>-J<span class="w"> </span>ACCEPT
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>iptables<span class="w"> </span>-A<span class="w"> </span>ssh<span class="w"> </span>-J<span class="w"> </span>DROP
+</code></pre></div>
+<ol>
+<li><code>-I</code> permet de placer la règle en haut de l'ordre d'exécution.</li>
+</ol>
+<h4 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>iptables -A INPUT -p tcp --dport 22 -s n.n.n.n -J ACCEPT
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>iptables -A INPUT -p tcp --dport 25 -s n.n.n.n -J ACCEPT
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>iptables -A INPUT -p tcp --dport 22 -J LOG &quot;SSH interdit&quot;
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>iptables -A INPUT -J DROP
+</code></pre></div>
+<h4 id="exercice-2_3">Exercice 2<a class="headerlink" href="#exercice-2_3" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>iptables -A OUTPUT -p all --dport 80 -J DROP
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>iptables -A OUTPUT -p all --dport 443 -J DROP
+</code></pre></div>
+<p>Affin de trier les utilisateurs, on doit utiliser le module <code>owner</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>iptables -I OUTPUT -p all --dport 80 -m owner --uid-owner root -J ACCEPT
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>iptables -I OUTPUT -p all --dport 443 -m owner --uid-owner root -J ACCEPT
+</code></pre></div>
+<h4 id="exercice-3_3">Exercice 3<a class="headerlink" href="#exercice-3_3" title="Permanent link">⚓︎</a></h4>
+<p>Il faut utiliser le module <code>limit</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>iptables -I INPUT -p icmp -m limit --limit 10/s -J ACCEPT
+</code></pre></div>
+<h3 id="suivi-de-connexion-conntrack">Suivi de connexion (conntrack)<a class="headerlink" href="#suivi-de-connexion-conntrack" title="Permanent link">⚓︎</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Cette section n'a pas été vérifiée.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>iptables -F
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>modeprobe ip_conntrack_ftp
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>iptables -A INPUT -J DROP
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>ftp
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>passive
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>open 192.198.n.n
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>exit
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>iptables -I INPUT -p tcp --sport 21 -m state --state ESTABLISHED -J ACCEPT
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>ftp
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>passive
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>open 192.198.n.n
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>n
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>n
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>ls
+</code></pre></div>
+<h2 id="td5">TD5<a class="headerlink" href="#td5" title="Permanent link">⚓︎</a></h2>
+<p>??abstract "<code>repeteur.c</code>"
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="cm">/*</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="cm">* Fichier &#39;repeteur.c&#39; utilise pour le TD 5 de programmation IP.</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="cm">* Le programme &#39;repeteur&#39; est un programme demon &quot;repetant&quot; tout</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="cm">* ce qu&#39;on lui dit.  Il tourne sur le port 6666 et reste � l&#39;ecoute</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="cm">* d&#39;une eventuelle connexion.</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="cm">*</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="cm">* Historique</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="cm">*    1999/10/15 : dntt : creation</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="cm">*/</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/stat.h&gt;</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>
+<a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span>
+<a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span>
+<a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/wait.h&gt;</span>
+<a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;netinet/in.h&gt;</span>
+<a id="__codelineno-28-21" name="__codelineno-28-21" href="#__codelineno-28-21"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;netdb.h&gt;</span>
+<a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;syslog.h&gt;</span>
+<a id="__codelineno-28-23" name="__codelineno-28-23" href="#__codelineno-28-23"></a>
+<a id="__codelineno-28-24" name="__codelineno-28-24" href="#__codelineno-28-24"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;signal.h&gt;</span>
+<a id="__codelineno-28-25" name="__codelineno-28-25" href="#__codelineno-28-25"></a>
+<a id="__codelineno-28-26" name="__codelineno-28-26" href="#__codelineno-28-26"></a><span class="cp">#define MAXLEN  1024</span>
+<a id="__codelineno-28-27" name="__codelineno-28-27" href="#__codelineno-28-27"></a><span class="cp">#define PORT_REPETEUR 6666</span>
+<a id="__codelineno-28-28" name="__codelineno-28-28" href="#__codelineno-28-28"></a><span class="cp">#define NB_CONN_MAX 5</span>
+<a id="__codelineno-28-29" name="__codelineno-28-29" href="#__codelineno-28-29"></a>
+<a id="__codelineno-28-30" name="__codelineno-28-30" href="#__codelineno-28-30"></a><span class="kt">void</span><span class="w"> </span><span class="nf">demon</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-31" name="__codelineno-28-31" href="#__codelineno-28-31"></a>
+<a id="__codelineno-28-32" name="__codelineno-28-32" href="#__codelineno-28-32"></a><span class="kt">void</span><span class="w"> </span><span class="nf">repeter</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">socket_cliente</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-33" name="__codelineno-28-33" href="#__codelineno-28-33"></a><span class="kt">int</span><span class="w"> </span><span class="nf">lecture_socket</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">socket_cliente</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-34" name="__codelineno-28-34" href="#__codelineno-28-34"></a>
+<a id="__codelineno-28-35" name="__codelineno-28-35" href="#__codelineno-28-35"></a>
+<a id="__codelineno-28-36" name="__codelineno-28-36" href="#__codelineno-28-36"></a><span class="cm">/************************************************************************</span>
+<a id="__codelineno-28-37" name="__codelineno-28-37" href="#__codelineno-28-37"></a><span class="cm">*</span>
+<a id="__codelineno-28-38" name="__codelineno-28-38" href="#__codelineno-28-38"></a><span class="cm">* Fonction principale :</span>
+<a id="__codelineno-28-39" name="__codelineno-28-39" href="#__codelineno-28-39"></a><span class="cm">* On cree le demon en dupliquant le processus afin de detacher le</span>
+<a id="__codelineno-28-40" name="__codelineno-28-40" href="#__codelineno-28-40"></a><span class="cm">* programme du processus pere</span>
+<a id="__codelineno-28-41" name="__codelineno-28-41" href="#__codelineno-28-41"></a><span class="cm">*</span>
+<a id="__codelineno-28-42" name="__codelineno-28-42" href="#__codelineno-28-42"></a><span class="cm">************************************************************************/</span>
+<a id="__codelineno-28-43" name="__codelineno-28-43" href="#__codelineno-28-43"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span>
+<a id="__codelineno-28-44" name="__codelineno-28-44" href="#__codelineno-28-44"></a><span class="p">{</span>
+<a id="__codelineno-28-45" name="__codelineno-28-45" href="#__codelineno-28-45"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">fork</span><span class="w"> </span><span class="p">())</span>
+<a id="__codelineno-28-46" name="__codelineno-28-46" href="#__codelineno-28-46"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-47" name="__codelineno-28-47" href="#__codelineno-28-47"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="p">:</span>
+<a id="__codelineno-28-48" name="__codelineno-28-48" href="#__codelineno-28-48"></a><span class="w">            </span><span class="n">perror</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;*** erreur : fork impossible : demon non cree&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-49" name="__codelineno-28-49" href="#__codelineno-28-49"></a><span class="w">            </span><span class="n">exit</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-50" name="__codelineno-28-50" href="#__codelineno-28-50"></a>
+<a id="__codelineno-28-51" name="__codelineno-28-51" href="#__codelineno-28-51"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">:</span>
+<a id="__codelineno-28-52" name="__codelineno-28-52" href="#__codelineno-28-52"></a><span class="w">        </span><span class="cm">/*</span>
+<a id="__codelineno-28-53" name="__codelineno-28-53" href="#__codelineno-28-53"></a><span class="cm">        * Ce processus fils est celui qui deviendra le demon.</span>
+<a id="__codelineno-28-54" name="__codelineno-28-54" href="#__codelineno-28-54"></a><span class="cm">        * Ingredients pour en faire un vrai et bon demons :</span>
+<a id="__codelineno-28-55" name="__codelineno-28-55" href="#__codelineno-28-55"></a><span class="cm">        */</span>
+<a id="__codelineno-28-56" name="__codelineno-28-56" href="#__codelineno-28-56"></a><span class="w">        </span><span class="cm">/* 1 - On cree une nouvelle session. Pas de terminal de controle */</span>
+<a id="__codelineno-28-57" name="__codelineno-28-57" href="#__codelineno-28-57"></a><span class="w">            </span><span class="n">setsid</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-58" name="__codelineno-28-58" href="#__codelineno-28-58"></a>
+<a id="__codelineno-28-59" name="__codelineno-28-59" href="#__codelineno-28-59"></a><span class="w">        </span><span class="cm">/* 2 - le repertoire courant est change a la racine afin de ne pas</span>
+<a id="__codelineno-28-60" name="__codelineno-28-60" href="#__codelineno-28-60"></a><span class="cm">        *     causer de probleme lors de demontage eventuel de partition</span>
+<a id="__codelineno-28-61" name="__codelineno-28-61" href="#__codelineno-28-61"></a><span class="cm">        */</span>
+<a id="__codelineno-28-62" name="__codelineno-28-62" href="#__codelineno-28-62"></a><span class="w">        </span><span class="n">chdir</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-63" name="__codelineno-28-63" href="#__codelineno-28-63"></a>
+<a id="__codelineno-28-64" name="__codelineno-28-64" href="#__codelineno-28-64"></a><span class="w">        </span><span class="cm">/* 3 - Le masque sur les droits lors de creation de fichiers */</span>
+<a id="__codelineno-28-65" name="__codelineno-28-65" href="#__codelineno-28-65"></a><span class="w">        </span><span class="n">umask</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-66" name="__codelineno-28-66" href="#__codelineno-28-66"></a>
+<a id="__codelineno-28-67" name="__codelineno-28-67" href="#__codelineno-28-67"></a><span class="w">        </span><span class="cm">/* 4 - Comme c&#39;est un demon qui est lance et qui est &quot;detache&quot; du</span>
+<a id="__codelineno-28-68" name="__codelineno-28-68" href="#__codelineno-28-68"></a><span class="cm">        *     term, l&#39;entree, la sortie et l&#39;erreur standard n&#39;ont pas de</span>
+<a id="__codelineno-28-69" name="__codelineno-28-69" href="#__codelineno-28-69"></a><span class="cm">        *     terminal ou s&#39;afficher. On peut donc les fermer.</span>
+<a id="__codelineno-28-70" name="__codelineno-28-70" href="#__codelineno-28-70"></a><span class="cm">        */</span>
+<a id="__codelineno-28-71" name="__codelineno-28-71" href="#__codelineno-28-71"></a><span class="w">            </span><span class="n">close</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-72" name="__codelineno-28-72" href="#__codelineno-28-72"></a><span class="w">        </span><span class="n">close</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-73" name="__codelineno-28-73" href="#__codelineno-28-73"></a><span class="w">        </span><span class="n">close</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-74" name="__codelineno-28-74" href="#__codelineno-28-74"></a>
+<a id="__codelineno-28-75" name="__codelineno-28-75" href="#__codelineno-28-75"></a>
+<a id="__codelineno-28-76" name="__codelineno-28-76" href="#__codelineno-28-76"></a><span class="w">        </span><span class="cm">/* 6 - On lance le demon proprement dit */</span>
+<a id="__codelineno-28-77" name="__codelineno-28-77" href="#__codelineno-28-77"></a><span class="w">            </span><span class="n">demon</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-78" name="__codelineno-28-78" href="#__codelineno-28-78"></a>
+<a id="__codelineno-28-79" name="__codelineno-28-79" href="#__codelineno-28-79"></a><span class="w">        </span><span class="cm">/* 7 - Si le demon s&#39;arrete, alors on sort du processus fils. Le</span>
+<a id="__codelineno-28-80" name="__codelineno-28-80" href="#__codelineno-28-80"></a><span class="cm">        *     programme est alors termine. */</span>
+<a id="__codelineno-28-81" name="__codelineno-28-81" href="#__codelineno-28-81"></a><span class="w">            </span><span class="n">exit</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-82" name="__codelineno-28-82" href="#__codelineno-28-82"></a>
+<a id="__codelineno-28-83" name="__codelineno-28-83" href="#__codelineno-28-83"></a><span class="w">        </span><span class="k">default</span><span class="w"> </span><span class="o">:</span>
+<a id="__codelineno-28-84" name="__codelineno-28-84" href="#__codelineno-28-84"></a><span class="w">        </span><span class="cm">/* Le processus pere est tue. On rend la main au shell appelant. */</span>
+<a id="__codelineno-28-85" name="__codelineno-28-85" href="#__codelineno-28-85"></a><span class="w">            </span><span class="n">exit</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-86" name="__codelineno-28-86" href="#__codelineno-28-86"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-87" name="__codelineno-28-87" href="#__codelineno-28-87"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-88" name="__codelineno-28-88" href="#__codelineno-28-88"></a><span class="p">}</span>
+<a id="__codelineno-28-89" name="__codelineno-28-89" href="#__codelineno-28-89"></a>
+<a id="__codelineno-28-90" name="__codelineno-28-90" href="#__codelineno-28-90"></a><span class="cm">/************************************************************************</span>
+<a id="__codelineno-28-91" name="__codelineno-28-91" href="#__codelineno-28-91"></a><span class="cm">*</span>
+<a id="__codelineno-28-92" name="__codelineno-28-92" href="#__codelineno-28-92"></a><span class="cm">* Le programme &#39;demon&#39;</span>
+<a id="__codelineno-28-93" name="__codelineno-28-93" href="#__codelineno-28-93"></a><span class="cm">*</span>
+<a id="__codelineno-28-94" name="__codelineno-28-94" href="#__codelineno-28-94"></a><span class="cm">* Structure</span>
+<a id="__codelineno-28-95" name="__codelineno-28-95" href="#__codelineno-28-95"></a><span class="cm">*           sockaddr_in : /usr/include/netinet/in.h</span>
+<a id="__codelineno-28-96" name="__codelineno-28-96" href="#__codelineno-28-96"></a><span class="cm">*</span>
+<a id="__codelineno-28-97" name="__codelineno-28-97" href="#__codelineno-28-97"></a><span class="cm">*</span>
+<a id="__codelineno-28-98" name="__codelineno-28-98" href="#__codelineno-28-98"></a><span class="cm">*</span>
+<a id="__codelineno-28-99" name="__codelineno-28-99" href="#__codelineno-28-99"></a><span class="cm">************************************************************************/</span>
+<a id="__codelineno-28-100" name="__codelineno-28-100" href="#__codelineno-28-100"></a><span class="kt">void</span><span class="w"> </span><span class="nf">demon</span><span class="w"> </span><span class="p">()</span>
+<a id="__codelineno-28-101" name="__codelineno-28-101" href="#__codelineno-28-101"></a><span class="p">{</span>
+<a id="__codelineno-28-102" name="__codelineno-28-102" href="#__codelineno-28-102"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">socket_ecoute</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-103" name="__codelineno-28-103" href="#__codelineno-28-103"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">socket_cliente</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-104" name="__codelineno-28-104" href="#__codelineno-28-104"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">valeur_retour</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-105" name="__codelineno-28-105" href="#__codelineno-28-105"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">salong</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-106" name="__codelineno-28-106" href="#__codelineno-28-106"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">opt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-107" name="__codelineno-28-107" href="#__codelineno-28-107"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">monadr</span><span class="p">,</span><span class="w"> </span><span class="n">sonadr</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-108" name="__codelineno-28-108" href="#__codelineno-28-108"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-109" name="__codelineno-28-109" href="#__codelineno-28-109"></a>
+<a id="__codelineno-28-110" name="__codelineno-28-110" href="#__codelineno-28-110"></a>
+<a id="__codelineno-28-111" name="__codelineno-28-111" href="#__codelineno-28-111"></a><span class="w">    </span><span class="cm">/*</span>
+<a id="__codelineno-28-112" name="__codelineno-28-112" href="#__codelineno-28-112"></a><span class="cm">    * Creation de la socket d&#39;ecoute</span>
+<a id="__codelineno-28-113" name="__codelineno-28-113" href="#__codelineno-28-113"></a><span class="cm">    */</span>
+<a id="__codelineno-28-114" name="__codelineno-28-114" href="#__codelineno-28-114"></a><span class="w">    </span><span class="n">socket_ecoute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="w"> </span><span class="p">(</span><span class="n">PF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-115" name="__codelineno-28-115" href="#__codelineno-28-115"></a>
+<a id="__codelineno-28-116" name="__codelineno-28-116" href="#__codelineno-28-116"></a><span class="w">    </span><span class="cm">/*</span>
+<a id="__codelineno-28-117" name="__codelineno-28-117" href="#__codelineno-28-117"></a><span class="cm">    * Modification des options associees a la socket d&#39;ecoute.</span>
+<a id="__codelineno-28-118" name="__codelineno-28-118" href="#__codelineno-28-118"></a><span class="cm">    */</span>
+<a id="__codelineno-28-119" name="__codelineno-28-119" href="#__codelineno-28-119"></a><span class="w">    </span><span class="n">setsockopt</span><span class="w"> </span><span class="p">(</span><span class="n">socket_ecoute</span><span class="p">,</span><span class="w"> </span><span class="n">SOL_SOCKET</span><span class="p">,</span><span class="w"> </span><span class="n">SO_REUSEADDR</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">opt</span><span class="p">,</span><span class="w"> </span>\
+<a id="__codelineno-28-120" name="__codelineno-28-120" href="#__codelineno-28-120"></a><span class="w">        </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="n">opt</span><span class="p">))</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-121" name="__codelineno-28-121" href="#__codelineno-28-121"></a>
+<a id="__codelineno-28-122" name="__codelineno-28-122" href="#__codelineno-28-122"></a><span class="w">    </span><span class="cm">/*</span>
+<a id="__codelineno-28-123" name="__codelineno-28-123" href="#__codelineno-28-123"></a><span class="cm">    * Initialisation des parametres internet de la socket d&#39;ecoute.</span>
+<a id="__codelineno-28-124" name="__codelineno-28-124" href="#__codelineno-28-124"></a><span class="cm">    */</span>
+<a id="__codelineno-28-125" name="__codelineno-28-125" href="#__codelineno-28-125"></a><span class="w">    </span><span class="n">bzero</span><span class="w"> </span><span class="p">((</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">monadr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="n">monadr</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-126" name="__codelineno-28-126" href="#__codelineno-28-126"></a><span class="w">    </span><span class="n">monadr</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-127" name="__codelineno-28-127" href="#__codelineno-28-127"></a><span class="w">    </span><span class="n">monadr</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="w"> </span><span class="p">(</span><span class="n">PORT_REPETEUR</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-128" name="__codelineno-28-128" href="#__codelineno-28-128"></a><span class="w">    </span><span class="n">monadr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">INADDR_ANY</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-129" name="__codelineno-28-129" href="#__codelineno-28-129"></a><span class="w">    </span><span class="n">valeur_retour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bind</span><span class="w"> </span><span class="p">(</span><span class="n">socket_ecoute</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">monadr</span><span class="p">,</span><span class="w"> </span>\
+<a id="__codelineno-28-130" name="__codelineno-28-130" href="#__codelineno-28-130"></a><span class="w">            </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="n">monadr</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-131" name="__codelineno-28-131" href="#__codelineno-28-131"></a>
+<a id="__codelineno-28-132" name="__codelineno-28-132" href="#__codelineno-28-132"></a><span class="w">    </span><span class="cm">/*</span>
+<a id="__codelineno-28-133" name="__codelineno-28-133" href="#__codelineno-28-133"></a><span class="cm">    * Socket mise en position d&#39;ecoute (&#39;listen&#39;). On specifie aussi le</span>
+<a id="__codelineno-28-134" name="__codelineno-28-134" href="#__codelineno-28-134"></a><span class="cm">    * nombre de connexions simultanees acceptees.</span>
+<a id="__codelineno-28-135" name="__codelineno-28-135" href="#__codelineno-28-135"></a><span class="cm">    */</span>
+<a id="__codelineno-28-136" name="__codelineno-28-136" href="#__codelineno-28-136"></a><span class="w">    </span><span class="n">valeur_retour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listen</span><span class="w"> </span><span class="p">(</span><span class="n">socket_ecoute</span><span class="p">,</span><span class="w"> </span><span class="n">NB_CONN_MAX</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-137" name="__codelineno-28-137" href="#__codelineno-28-137"></a>
+<a id="__codelineno-28-138" name="__codelineno-28-138" href="#__codelineno-28-138"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-28-139" name="__codelineno-28-139" href="#__codelineno-28-139"></a><span class="cm">    * Le demon tourne indefiniment a l&#39;ecoute d&#39;eventuelles connections</span>
+<a id="__codelineno-28-140" name="__codelineno-28-140" href="#__codelineno-28-140"></a><span class="cm">    * &#39;accept&#39;</span>
+<a id="__codelineno-28-141" name="__codelineno-28-141" href="#__codelineno-28-141"></a><span class="cm">    * Lorsqu&#39;un client se connecte, une socket est cree (socket_cliente).</span>
+<a id="__codelineno-28-142" name="__codelineno-28-142" href="#__codelineno-28-142"></a><span class="cm">    * on duplique le processus et le processus fils prend en charge</span>
+<a id="__codelineno-28-143" name="__codelineno-28-143" href="#__codelineno-28-143"></a><span class="cm">    * cette socket par la fonction &#39;repeter&#39;.</span>
+<a id="__codelineno-28-144" name="__codelineno-28-144" href="#__codelineno-28-144"></a><span class="cm">    */</span>
+<a id="__codelineno-28-145" name="__codelineno-28-145" href="#__codelineno-28-145"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-28-146" name="__codelineno-28-146" href="#__codelineno-28-146"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-147" name="__codelineno-28-147" href="#__codelineno-28-147"></a><span class="w">        </span><span class="n">salong</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="n">sonadr</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-148" name="__codelineno-28-148" href="#__codelineno-28-148"></a>
+<a id="__codelineno-28-149" name="__codelineno-28-149" href="#__codelineno-28-149"></a><span class="w">        </span><span class="n">socket_cliente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accept</span><span class="w"> </span><span class="p">(</span><span class="n">socket_ecoute</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sonadr</span><span class="p">,</span><span class="w"> </span>\
+<a id="__codelineno-28-150" name="__codelineno-28-150" href="#__codelineno-28-150"></a><span class="w">                                </span><span class="p">(</span><span class="kt">socklen_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">salong</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-151" name="__codelineno-28-151" href="#__codelineno-28-151"></a>
+<a id="__codelineno-28-152" name="__codelineno-28-152" href="#__codelineno-28-152"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">fork</span><span class="w"> </span><span class="p">())</span>
+<a id="__codelineno-28-153" name="__codelineno-28-153" href="#__codelineno-28-153"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-28-154" name="__codelineno-28-154" href="#__codelineno-28-154"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="p">:</span>
+<a id="__codelineno-28-155" name="__codelineno-28-155" href="#__codelineno-28-155"></a><span class="w">        </span><span class="k">break</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-156" name="__codelineno-28-156" href="#__codelineno-28-156"></a>
+<a id="__codelineno-28-157" name="__codelineno-28-157" href="#__codelineno-28-157"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">:</span>
+<a id="__codelineno-28-158" name="__codelineno-28-158" href="#__codelineno-28-158"></a><span class="w">                </span><span class="n">repeter</span><span class="w"> </span><span class="p">(</span><span class="n">socket_cliente</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-159" name="__codelineno-28-159" href="#__codelineno-28-159"></a><span class="w">                </span><span class="n">close</span><span class="w"> </span><span class="p">(</span><span class="n">socket_cliente</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-160" name="__codelineno-28-160" href="#__codelineno-28-160"></a><span class="w">        </span><span class="n">kill</span><span class="w"> </span><span class="p">(</span><span class="n">getpid</span><span class="p">(),</span><span class="n">SIGTERM</span><span class="p">);</span>
+<a id="__codelineno-28-161" name="__codelineno-28-161" href="#__codelineno-28-161"></a>
+<a id="__codelineno-28-162" name="__codelineno-28-162" href="#__codelineno-28-162"></a><span class="w">        </span><span class="k">default</span><span class="w"> </span><span class="o">:</span>
+<a id="__codelineno-28-163" name="__codelineno-28-163" href="#__codelineno-28-163"></a><span class="w">        </span><span class="n">waitpid</span><span class="w"> </span><span class="p">(</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">status</span><span class="p">,</span><span class="w"> </span><span class="n">WNOHANG</span><span class="p">);</span>
+<a id="__codelineno-28-164" name="__codelineno-28-164" href="#__codelineno-28-164"></a><span class="w">                </span><span class="n">close</span><span class="w"> </span><span class="p">(</span><span class="n">socket_cliente</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-165" name="__codelineno-28-165" href="#__codelineno-28-165"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-28-166" name="__codelineno-28-166" href="#__codelineno-28-166"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-167" name="__codelineno-28-167" href="#__codelineno-28-167"></a><span class="p">}</span>
+<a id="__codelineno-28-168" name="__codelineno-28-168" href="#__codelineno-28-168"></a>
+<a id="__codelineno-28-169" name="__codelineno-28-169" href="#__codelineno-28-169"></a><span class="cm">/************************************************************************</span>
+<a id="__codelineno-28-170" name="__codelineno-28-170" href="#__codelineno-28-170"></a><span class="cm">*</span>
+<a id="__codelineno-28-171" name="__codelineno-28-171" href="#__codelineno-28-171"></a><span class="cm">* La fonction qui repete</span>
+<a id="__codelineno-28-172" name="__codelineno-28-172" href="#__codelineno-28-172"></a><span class="cm">*</span>
+<a id="__codelineno-28-173" name="__codelineno-28-173" href="#__codelineno-28-173"></a><span class="cm">*</span>
+<a id="__codelineno-28-174" name="__codelineno-28-174" href="#__codelineno-28-174"></a><span class="cm">*</span>
+<a id="__codelineno-28-175" name="__codelineno-28-175" href="#__codelineno-28-175"></a><span class="cm">************************************************************************/</span>
+<a id="__codelineno-28-176" name="__codelineno-28-176" href="#__codelineno-28-176"></a><span class="kt">void</span><span class="w"> </span><span class="nf">repeter</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">socket_cliente</span><span class="p">)</span>
+<a id="__codelineno-28-177" name="__codelineno-28-177" href="#__codelineno-28-177"></a><span class="p">{</span>
+<a id="__codelineno-28-178" name="__codelineno-28-178" href="#__codelineno-28-178"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nb_lu</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-179" name="__codelineno-28-179" href="#__codelineno-28-179"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="w"> </span><span class="p">[</span><span class="n">MAXLEN</span><span class="p">]</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-180" name="__codelineno-28-180" href="#__codelineno-28-180"></a>
+<a id="__codelineno-28-181" name="__codelineno-28-181" href="#__codelineno-28-181"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">nb_lu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lecture_socket</span><span class="w"> </span><span class="p">(</span><span class="n">socket_cliente</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-28-182" name="__codelineno-28-182" href="#__codelineno-28-182"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-183" name="__codelineno-28-183" href="#__codelineno-28-183"></a><span class="w">    </span><span class="cm">/* Si probleme de lecture sur la socket (fermee brutalement</span>
+<a id="__codelineno-28-184" name="__codelineno-28-184" href="#__codelineno-28-184"></a><span class="cm">    * par exemple) */</span>
+<a id="__codelineno-28-185" name="__codelineno-28-185" href="#__codelineno-28-185"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nb_lu</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">nb_lu</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-28-186" name="__codelineno-28-186" href="#__codelineno-28-186"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-187" name="__codelineno-28-187" href="#__codelineno-28-187"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-188" name="__codelineno-28-188" href="#__codelineno-28-188"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-189" name="__codelineno-28-189" href="#__codelineno-28-189"></a>
+<a id="__codelineno-28-190" name="__codelineno-28-190" href="#__codelineno-28-190"></a><span class="w">    </span><span class="cm">/* On repete ce qui a ete dit et on renvoie au client */</span>
+<a id="__codelineno-28-191" name="__codelineno-28-191" href="#__codelineno-28-191"></a><span class="w">    </span><span class="n">write</span><span class="w"> </span><span class="p">(</span><span class="n">socket_cliente</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">nb_lu</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-192" name="__codelineno-28-192" href="#__codelineno-28-192"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-193" name="__codelineno-28-193" href="#__codelineno-28-193"></a><span class="p">}</span>
+<a id="__codelineno-28-194" name="__codelineno-28-194" href="#__codelineno-28-194"></a>
+<a id="__codelineno-28-195" name="__codelineno-28-195" href="#__codelineno-28-195"></a><span class="kt">int</span><span class="w"> </span><span class="nf">lecture_socket</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">socket_cliente</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">)</span>
+<a id="__codelineno-28-196" name="__codelineno-28-196" href="#__codelineno-28-196"></a><span class="p">{</span>
+<a id="__codelineno-28-197" name="__codelineno-28-197" href="#__codelineno-28-197"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nb_lu</span><span class="w">  </span><span class="p">;</span>
+<a id="__codelineno-28-198" name="__codelineno-28-198" href="#__codelineno-28-198"></a>
+<a id="__codelineno-28-199" name="__codelineno-28-199" href="#__codelineno-28-199"></a><span class="w">    </span><span class="n">nb_lu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="p">(</span><span class="n">socket_cliente</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">MAXLEN</span><span class="p">)</span><span class="w">  </span><span class="p">;</span>
+<a id="__codelineno-28-200" name="__codelineno-28-200" href="#__codelineno-28-200"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">nb_lu</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-28-201" name="__codelineno-28-201" href="#__codelineno-28-201"></a><span class="p">}</span>
+</code></pre></div></p>
+<details class="abstract">
+<summary><code>makefile</code></summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c">#</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="c"># Makefile pour &#39;repeter.c&#39;</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="c">#</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="c"># 1999/10/15 : dntt : creation</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="c">#</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="nf">all </span><span class="o">:</span><span class="w"> </span><span class="n">repeteur</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="nv">CC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>gcc
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="nv">OPT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-O<span class="w"> </span>-Wall<span class="w"> </span>-pedantic<span class="w"> </span>-g<span class="w"> </span>-DCORRECTION
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="nf">.SUFFIXES</span><span class="o">:</span><span class="w"> </span>.<span class="n">o</span> .<span class="n">c</span>
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="nf">.c.o </span><span class="o">:</span>
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a><span class="w">    </span><span class="si">${</span><span class="nv">CC</span><span class="si">}</span><span class="w"> </span>-c<span class="w"> </span><span class="si">${</span><span class="nv">OPT</span><span class="si">}</span><span class="w"> </span><span class="nv">$*</span>.c
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a>
+<a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a><span class="nv">OBJ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>repeteur.c<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a>
+<a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a><span class="nf">repeteur </span><span class="o">:</span><span class="w"> </span><span class="n">repeteur</span>.<span class="n">o</span>
+<a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a><span class="w">    </span><span class="si">${</span><span class="nv">CC</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">OPT</span><span class="si">}</span><span class="w">  </span>repeteur.o<span class="w"> </span>-o<span class="w"> </span>repeteur
+</code></pre></div>
+</details>
+<h3 id="exercice-1_1">Exercice 1<a class="headerlink" href="#exercice-1_1" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>./repeteur
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>telnet
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>open
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>localhost 6666
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>Salut mdrrrrrrrrr
+</code></pre></div>
+<h3 id="exercice-2_4">Exercice 2<a class="headerlink" href="#exercice-2_4" title="Permanent link">⚓︎</a></h3>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Dernière mise à jour:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 7, 2023</span>
+      
+        <br>
+        Créé:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 7, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../../cfa/8/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 8 - SLAAC et DHCPv6" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                8 - SLAAC et DHCPv6
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../maths/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Maths" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Maths
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2015 - 2023 Tim FROLOV
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/flaghunter01/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+    
+  </body>
+</html>
