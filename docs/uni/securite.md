@@ -46,7 +46,7 @@ Il parrait que c'est juste `buffer overflow`
 
  - 1
  - 
-D'après Chris: `H` revient deux fois donc c'est ue lettre fréquente, comme E.
+D'après Chris: `H` revient deux fois donc c'est une lettre fréquente, comme E.
 On fait donc le masque suivant:
 ```
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
